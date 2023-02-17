@@ -1,5 +1,6 @@
 from hashlib import new
 from logging import PlaceHolder
+from tkinter.font import names
 import streamlit as st
 import os
 import pandas as pd
@@ -36,6 +37,7 @@ if check_path == True:
 
 
 
+
 action = st.radio("Select Action: ",
 				 ('find_all_class_names',
 				 'find_no_class_names', 
@@ -52,11 +54,10 @@ if action == 'find_all_class_names':
 		resp = find_all_classes(path)
 		print(resp)
 		df = st.json(resp)
-		data_frame = pd.DataFrame([resp])
-		# data_frame = pd.DataFrame(resp.items(), columns=list(resp.keys()))
-
-
+		data_frame = pd.DataFrame(list(resp.values()),index=list(resp.keys()))
 		st.bar_chart(data_frame)
+
+
 
 
 			
