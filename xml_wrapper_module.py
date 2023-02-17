@@ -9,7 +9,7 @@ import cv2
 import shutil
 import argparse
 import sys
-# from transformer import Transformer
+from transformer import Transformer
 
 
 
@@ -149,6 +149,34 @@ def create_txt_file(classes):
 	return os.path.join(os.getcwd(),'classes.txt')
 
 
+
+def xml2txt(xml_dir,out_dir):
+    parser = argparse.ArgumentParser(description="Formatter from ImageNet xml to Darknet text format")
+    parser.add_argument("-xml", help="Relative location of xml files directory" ,default='xml')
+    parser.add_argument("-out", help="Relative location of output txt files directory", default="out")
+    parser.add_argument("-c", help="Relative path to classes file", default="classes.txt")
+    args = parser.parse_args()
+
+    xml_dir = os.path.join(os.path.dirname(os.path.realpath('__file__')), xml_dir)
+    if not os.path.exists(xml_dir):
+        print("Provide the correct folder for xml files.")
+        sys.exit()
+
+    out_dir = os.path.join(os.path.dirname(os.path.realpath('__file__')), out_dir)
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
+
+    if not os.access(out_dir, os.W_OK):
+        print("%s folder is not writeable." % out_dir)
+        sys.exit()
+    
+    
+    transformer = Transformer(xml_dir=xml_dir, out_dir=out_dir)
+    transformer.transform()
+
+
+
+
 def split_folder(folder_path,size,image_type='jpg'):
 	if not os.path.isdir(folder_path):
 		return {"message":f"{folder_path} path does not exists"}
@@ -180,39 +208,16 @@ def split_folder(folder_path,size,image_type='jpg'):
 	
 	for path in list(set(out_folders)):
 		classes = find_all_classes(path)
-		classes = str(classes.keys())
+		classes = list(classes.keys())
 		classes_path = create_txt_file(classes)
 		xml2txt(path,path)
 		remove_xml_files(path)
+		shutil.copyfile('classes.txt',os.path.join(path,'classes.txt'))
 
 
 
 	return {"message":f" {folder_count} folders created", "destination_folders":list(set(out_folders))}
 
-def send_mail(sender,receiver,message,attached_file):
-	# Import smtplib for the actual sending function
-	import smtplib
-
-	# Import the email modules we'll need
-	from email.mime.text import MIMEText
-
-	# Open a plain text file for reading.  For this example, assume that
-	# the text file contains only ASCII characters.
-	with open(textfile, 'rb') as fp:
-		# Create a text/plain message
-		msg = MIMEText(fp.read())
-
-	# me == the sender's email address
-	# you == the recipient's email address
-	msg['Subject'] = 'The contents of %s' % textfile
-	msg['From'] = me
-	msg['To'] = you
-
-	# Send the message via our own SMTP server, but don't include the
-	# envelope header.
-	s = smtplib.SMTP('localhost')
-	s.sendmail(me, [you], msg.as_string())
-	s.quit()
 
 def split_images_from_folder(folder_path,no_of_folders,emails):
 	image_types = ['jpg','JPG','png','PNG','bmp','BMP']
@@ -257,30 +262,6 @@ def split_images_from_folder(folder_path,no_of_folders,emails):
 			counter += 1
 
 	return {"message":f" Data copied to {emails} in given path. "}
-
-def xml2txt(xml_dir,out_dir):
-    parser = argparse.ArgumentParser(description="Formatter from ImageNet xml to Darknet text format")
-    parser.add_argument("-xml", help="Relative location of xml files directory" ,default='xml')
-    parser.add_argument("-out", help="Relative location of output txt files directory", default="out")
-    parser.add_argument("-c", help="Relative path to classes file", default="classes.txt")
-    args = parser.parse_args()
-
-    xml_dir = os.path.join(os.path.dirname(os.path.realpath('__file__')), xml_dir)
-    if not os.path.exists(xml_dir):
-        print("Provide the correct folder for xml files.")
-        sys.exit()
-
-    out_dir = os.path.join(os.path.dirname(os.path.realpath('__file__')), out_dir)
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
-
-    if not os.access(out_dir, os.W_OK):
-        print("%s folder is not writeable." % out_dir)
-        sys.exit()
-    
-    
-    transformer = Transformer(xml_dir=xml_dir, out_dir=out_dir)
-    transformer.transform()
 
 def delete_class_names(path,classes_list):
 	files = glob(os.path.join(path,'*.xml'))

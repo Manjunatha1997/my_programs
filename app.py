@@ -26,31 +26,9 @@ st.set_page_config(
 #                    layout="wide", initial_sidebar_state='expanded')
 
 # Title
-st.title("Annotation Validation")
+# st.title("Annotation Validation")
 
-# path = st.text_input('Enter your input folder path !',placeholder="Enter your input folder path ")
-# check_path = st.button('Check Path')
-# if check_path == True:
-# 	resp_path = check_path_dir(path)
-# 	if resp_path == False:
-# 		st.warning("Please check your path ")
-# 	if resp_path == True:
-# 		st.success(" Select action and go !!! ")
-
-
-
-
-# action = st.radio("Select Action: ",
-# 				 ('find_all_class_names',
-# 				 'find_no_class_names', 
-# 				 'find_un_annotated_images',
-# 				 'rename_class_names',
-# 				 'delete_class_names',
-# 				 'split_folder',
-# 				 )
-# 				 )
-
-
+st.markdown("<h1 style='text-align: center;font-weight:bold; color: #4885A2;'>Annotation Validation</h1>", unsafe_allow_html=True)
 
 
 
@@ -138,27 +116,33 @@ if action == 'rename_class_names':
 		st.json(resp)
 
 if action == 'split_folder':
-	# file_type = st.radio('selectfile type',('jpg','png'))
-	mb_split = st.radio('Define MB or folders',('folders','MB'))
+	file_type = st.radio('selectfile type',('jpg','png'))
+	mb_size = st.number_input("Set MB",min_value=1,max_value=150)
+	btn = st.button('Submit')
+	if btn == True:
+		resp = split_folder(path,mb_size,image_type = file_type)
+		st.json(resp)
 
-	if mb_split == 'MB':
-		set_mb = st.number_input('set MB',min_value=1)
-		btn = st.button('Submit')
+	# mb_split = st.radio('Define MB or folders',('folders','MB'))
 
-	if mb_split == 'folders':
-		set_folders = st.number_input('Set no.of folders',min_value=1)
-		all_mails = []
-		for i in range(set_folders):
-			j = str(i)
-			key = j+'email'
-			mail = st.text_input('Enter Email',placeholder='Enter Email',key=j)
-			all_mails.append(mail)
+	# if mb_split == 'MB':
+	# 	set_mb = st.number_input('set MB',min_value=1)
+	# 	btn = st.button('Submit')
+
+	# if mb_split == 'folders':
+	# 	set_folders = st.number_input('Set no.of folders',min_value=1)
+	# 	all_mails = []
+	# 	for i in range(set_folders):
+	# 		j = str(i)
+	# 		key = j+'email'
+	# 		mail = st.text_input('Enter Email',placeholder='Enter Email',key=j)
+	# 		all_mails.append(mail)
 
 
 
-		btn = st.button('Submit')
-		if btn:
-			st.text(all_mails)
+	# 	btn = st.button('Submit')
+	# 	if btn:
+	# 		st.text(all_mails)
 
 if action == 'delete_class_names':
 	all_classes = find_all_classes(path)
