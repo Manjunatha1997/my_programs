@@ -1,6 +1,7 @@
 from hashlib import new
 from logging import PlaceHolder
 from tkinter.font import names
+from pyparsing import col
 import streamlit as st
 import os
 import pandas as pd
@@ -17,8 +18,9 @@ from PIL import Image
 image = Image.open("lincode.png")
 
 st.set_page_config(
-  page_title="LIVIS",page_icon=image
+  page_title="LIVIS",page_icon=image,layout="wide"
 )
+
 
 # st.set_page_config(page_title='My First App', page_icon=':smiley', 
 #                    layout="wide", initial_sidebar_state='expanded')
@@ -26,7 +28,35 @@ st.set_page_config(
 # Title
 st.title("Annotation Validation")
 
+# path = st.text_input('Enter your input folder path !',placeholder="Enter your input folder path ")
+# check_path = st.button('Check Path')
+# if check_path == True:
+# 	resp_path = check_path_dir(path)
+# 	if resp_path == False:
+# 		st.warning("Please check your path ")
+# 	if resp_path == True:
+# 		st.success(" Select action and go !!! ")
+
+
+
+
+# action = st.radio("Select Action: ",
+# 				 ('find_all_class_names',
+# 				 'find_no_class_names', 
+# 				 'find_un_annotated_images',
+# 				 'rename_class_names',
+# 				 'delete_class_names',
+# 				 'split_folder',
+# 				 )
+# 				 )
+
+
+
+
+
 path = st.text_input('Enter your input folder path !',placeholder="Enter your input folder path ")
+
+
 check_path = st.button('Check Path')
 if check_path == True:
 	resp_path = check_path_dir(path)
@@ -34,8 +64,6 @@ if check_path == True:
 		st.warning("Please check your path ")
 	if resp_path == True:
 		st.success(" Select action and go !!! ")
-
-
 
 
 action = st.radio("Select Action: ",
@@ -48,19 +76,23 @@ action = st.radio("Select Action: ",
 				 )
 				 )
 
+
+
 if action == 'find_all_class_names':
-	x = st.button('Submit')
+	x = st.button('Get All Classes')
 	if x == True:
 		resp = find_all_classes(path)
-		print(resp)
-		df = st.json(resp)
-		data_frame = pd.DataFrame(list(resp.values()),index=list(resp.keys()))
-		st.bar_chart(data_frame)
+		if resp:
+			data_frame = pd.DataFrame(list(resp.values()),index=list(resp.keys()))
+			col1, col2 = st.columns(2)
+			with col1:
+				df = st.json(resp)
+			with col2:
+				st.bar_chart(data_frame)
+		else:
+			st.text("No classes found  ")
 
 
-
-
-			
 if action == 'find_un_annotated_images':
 	remove = st.radio("Remove ",('No', 'Yes') )
 	
@@ -86,13 +118,15 @@ if action == 'find_un_annotated_images':
 			st.json(resp)
 
 if action == 'find_no_class_names':
-	remove = st.checkbox('Remove')
 	resp = find_no_class_names(path)
-	st.text(resp)
-	
-	if remove:
-		resp = find_no_class_names(path,remove=True)
+	if resp:
 		st.text(resp)
+		remove = st.checkbox('Remove')
+		if remove:
+			resp = find_no_class_names(path,remove=True)
+			st.text(resp)
+	else:
+		st.text("No files found")
 
 if action == 'rename_class_names':
 	old_class_name = st.text_input('Enter class name',placeholder="Enter class name")
@@ -126,18 +160,17 @@ if action == 'split_folder':
 		if btn:
 			st.text(all_mails)
 
-
 if action == 'delete_class_names':
 	all_classes = find_all_classes(path)
-	all_classes = list(all_classes.keys())
-	select_delete_classs = st.multiselect("Select classes you want to delete.",all_classes)
-	btn = st.button('Submit')
-	if btn == True:
-		st.text(select_delete_classs)
-		resp = delete_class_names(path,select_delete_classs)
-		st.json(resp)
-
-
+	if all_classes:
+		all_classes = list(all_classes.keys())
+		select_delete_classs = st.multiselect("Select classes you want to delete.",all_classes)
+		btn = st.button('Submit')
+		if btn == True:
+			resp = delete_class_names(path,select_delete_classs)
+			st.json(resp)
+	else:
+		st.text("No classes found !!!")
 
 
 ## Remove footer of streamlit

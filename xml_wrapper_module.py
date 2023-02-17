@@ -29,6 +29,9 @@ def move_file(in_file,out_dir):
 	return True
 
 def find_all_classes(path):
+	if not os.path.isdir(path):
+		return {}
+
 	class_names = []
 	files = os.listdir(os.path.join(path))
 	for file in files:
@@ -39,7 +42,7 @@ def find_all_classes(path):
 				if elt.tag == 'name':
 					class_names.append(elt.text)				
 	temp = {}
-	for i in class_names:
+	for i in set(class_names):
 		temp[i] = class_names.count(i)
 	return temp	
 
@@ -103,7 +106,6 @@ def find_no_class_names(input_path,remove=False):
 			l = [elt.tag for elt in root.iter()]
 			if 'name' not in l:
 				empty_names.append(os.path.join(input_path,file))
-	print(empty_names,'**********')
 	if remove == True:
 		for ef in empty_names:
 			os.remove(ef)
@@ -114,6 +116,12 @@ def find_no_class_names(input_path,remove=False):
 def rename_class_name(folder_path, old_class, new_class):
 	if not os.path.isdir(folder_path):
 		return {"message":"Folder not exists"}
+	
+	all_classes = find_all_classes(folder_path)
+	if not old_class in list(all_classes.keys()):
+		return {"message":f"{old_class} not exists"}
+
+
 
 	files = glob(os.path.join(folder_path,'*.xml'))
 	for file in files:
@@ -275,12 +283,15 @@ def xml2txt(xml_dir,out_dir):
     transformer.transform()
 
 def delete_class_names(path,classes_list):
-	files = glob(os.path.join(path+'*.xml'))
+	files = glob(os.path.join(path,'*.xml'))
+	if not files:
+		return {"message":"Not found XML files."}
 	for file in files:
 		tree = ET.parse(file)
 		root = tree.getroot()
 		for object in root.findall('object'):
 			name = object.find('name').text
+			print(name, classes_list)
 
 			if name in classes_list: 
 				root.remove(object)
@@ -293,14 +304,14 @@ def delete_class_names(path,classes_list):
 
 if __name__ =="__main__":
 
-	resp = split_images_from_folder(r'D:\sansera_conrod_burr\burr\test',5,["mail12","mail22","wdw","sf","wefdewfw"])
-	print(resp)
+	# resp = split_images_from_folder(r'D:\sansera_conrod_burr\burr\test',5,["mail12","mail22","wdw","sf","wefdewfw"])
+	# print(resp)
 	
 	# resp = split_folder(r'D:\sansera_conrod_burr\burr\test',4)
 	# print(resp)
 
-	# resp= find_extra_images(r'D:\sansera_conrod_burr\burr\test',remove=True,move=None)
-	# print(resp)
+	resp= find_extra_images(r'D:\sansera_conrod_burr\burr\test',remove=False,move=None)
+	print(resp)
 
 	# resp = find_no_class_names(r'D:\sansera_conrod_burr\burr\test',remove=True)
 	# print(resp)
