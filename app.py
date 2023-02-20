@@ -1,7 +1,6 @@
 from hashlib import new
 from logging import PlaceHolder
 from tkinter.font import names
-from pyparsing import col
 import streamlit as st
 import os
 import pandas as pd
