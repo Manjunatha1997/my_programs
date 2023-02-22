@@ -32,7 +32,6 @@ st.markdown("<h1 style='text-align: center;font-weight:bold; color: #4885A2;'>An
 
 path = st.text_input('Enter your input folder path !',placeholder="Enter your input folder path ")
 
-
 check_path = st.button('Check Path')
 if check_path == True:
 	resp_path = check_path_dir(path)
@@ -42,15 +41,25 @@ if check_path == True:
 		st.success(" Select action and go !!! ")
 
 
-action = st.radio("Select Action: ",
-				 ('find_all_class_names',
+
+
+# action = st.radio("Select Action: ",
+# 				 ('find_all_class_names',
+# 				 'find_no_class_names', 
+# 				 'find_un_annotated_images',
+# 				 'rename_class_names',
+# 				 'delete_class_names',
+# 				 'split_folder',
+# 				 )
+# 				 )
+
+action = st.selectbox("Select Action",('find_all_class_names',
 				 'find_no_class_names', 
 				 'find_un_annotated_images',
 				 'rename_class_names',
 				 'delete_class_names',
 				 'split_folder',
-				 )
-				 )
+				 ))
 
 
 
