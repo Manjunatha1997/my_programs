@@ -5,7 +5,6 @@ import streamlit as st
 import os
 import pandas as pd
 import numpy as np
-from utils import check_path_dir
 from xml_wrapper_module import *
 from PIL import Image
 

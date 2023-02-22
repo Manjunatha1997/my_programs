@@ -1,7 +1,5 @@
 
-from genericpath import isdir
 from glob import glob
-from importlib.resources import path
 from math import floor
 import os
 import xml.etree.ElementTree as ET
@@ -12,6 +10,12 @@ import sys
 from transformer import Transformer
 
 
+
+def check_path_dir(path):
+	if not os.path.isdir(path):
+		return False
+	else:
+		return True
 
 
 def move_file(in_file,out_dir):
