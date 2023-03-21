@@ -1,0 +1,28 @@
+,Total Images,Total Annotated Images,Total UnAnnotated Images,Total Bounding Box,Domain,Part ID,Part Name
+0,33,33,0,52,lincode,60509d9fe2058071bbf57e89,Nut and Bolt
+1,103,97,6,303,lincode,6058826d58b4150783dd3300,L shaped part
+2,70,27,43,76,lincode,606334a89376e8517645d7d8,Insert parts
+3,958,309,649,741,lincode,606574bf64bca9b7b552a749,PCBA_OP4830
+4,1201,5,1196,13,lincode,606ff326759d56a5646ce6c6,Cartridge
+5,1600,1598,2,28054,lincode,6073f27591a2f7f72fa5bec3,pin
+6,33626,4,33622,13,lincode,60892748f5bc7de729d888d8,Catalyst CA8
+7,46,46,0,131,lincode,60bddf426fca5259c4e1c678,Shaft_AD329
+8,8,6,2,20,lincode,60f186897abb9bc4da44dcac,ACB Mechanism
+9,229,205,24,1053,lincode,61558920f7b3dea6015bc8f8,MCB
+10,7,7,0,75,lincode,6194af9450874d480c8ff107,Turbo_charger
+11,28,28,0,73,lincode,6194d530cf479547e49f0522,MCB2
+12,40,40,0,170,lincode,619631c2ed575baa93c653b9,OP4832
+13,20,20,0,40,lincode,61adc54a45d1015eb413748b,MCB_back_view
+14,7315,7315,0,25146,lincode,61af550edaf306a620e50a0a,Indo_medical
+15,37,37,0,826,lincode,61b04a3adaf306a620e5282b,Indo2
+16,17,17,0,243,lincode,61b1d048003516a5c9782ae9,Sansera
+17,95,95,0,1006,lincode,61b1f816003516a5c9782c6d,Philips_new
+18,2,2,0,51,lincode,61b82f9ec70addeda9b5b188,test2
+19,9,0,9,0,lincode,61b83015c70addeda9b5b199,test3
+20,12,12,0,38,lincode,61b982cbc70addeda9b5bd6a,test4
+21,22,22,0,465,lincode,61bb1440c70addeda9b5c516,PCBA2
+22,75,75,0,20550,lincode,61c17375f1c60badb8271c46,PH_demo
+23,5,5,0,11,lincode,61c2d939d6ffdd016ddd0956,remote
+24,312,0,312,0,lincode,626130df954c9207eb2b2d4e,aa
+25,6,0,6,0,lincode,62a1d825e1cb0c3989223904,test_upload
+26,0,0,0,0,lincode,62a83c267bea7f307407f2a0,test_001

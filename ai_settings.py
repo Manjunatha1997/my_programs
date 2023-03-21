@@ -1,0 +1,27 @@
+
+SERVER_HOST = "localhost"
+
+#Settings for MongoDB
+MONGO_SERVER_HOST = '35.236.186.201' # dev machine
+MONGO_SERVER_PORT = 26000 
+MONGO_DB = "LIVIS"
+INSPECTION_DATA_COLLECTION = "inspection_summary"
+MONGO_COLLECTION_PARTS = "parts"
+MONGO_COLLECTIONS = {MONGO_COLLECTION_PARTS: "parts"}
+WORKSTATION_COLLECTION = 'workstations'
+PARTS_COLLECTION = 'parts'
+SHIFT_COLLECTION = 'shift'
+# PLAN_COLLECTION = 'plan'
+
+
+# #Settings for Redis
+REDIS_CLIENT_HOST = "localhost"
+REDIS_CLIENT_PORT = 6379
+
+# MONGO_DB = "Indo_trial"
+# INSPECTION_DATA_COLLECTION = "inspection_summary"
+# MONGO_COLLECTION_PARTS = "parts"
+# MONGO_COLLECTIONS = {"MONGO_COLLECTION_PARTS": "parts" ,"INSPECTION_DATA_COLLECTION" :"inspection_summary" ,"SHIFT_COLLECTION" : 'shift'}
+# WORKSTATION_COLLECTION = 'workstation'
+# PARTS_COLLECTION = 'parts'
+# SHIFT_COLLECTION = 'shift'
