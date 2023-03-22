@@ -88,7 +88,7 @@ def send_mail_attcach(sender,password, receiver,files):
 		# Add body to email
 		message.attach(MIMEText(body, "plain"))
 
-		filename =  files[0]#"info.csv" # In same directory as script
+		# filename =  files[0]#"info.csv" # In same directory as script
 		
 		for filename in files:
 			# Open PDF file in binary mode

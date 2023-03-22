@@ -35,7 +35,7 @@ resp_data = {
 
 
 file_names = []
-domains_list = ['demo4']
+# domains_list = ['demo4']
 for domain in domains_list:
 
     domains = []
@@ -126,7 +126,7 @@ for domain in domains_list:
 
 
 sender = "manjunatha.reddy@lincode.ai" 
-receiver = "manjunatha.reddy@lincode.ai"#,"rishabh.singh@lincode.ai"]
+receiver = "manjunatha.reddy@lincode.ai"
 filename = file_names
 password =  "cokywtbgeezhqjwz" # "cokywtbgeezhqjwz" # "wedpyxysjvsvyjbe" # personal -  mr
 message = send_mail_attcach(sender,password,receiver,filename)
