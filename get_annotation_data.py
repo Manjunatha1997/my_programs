@@ -126,7 +126,7 @@ for domain in domains_list:
 
 
 sender = "manjunatha.reddy@lincode.ai" 
-receiver = "manjunatha.reddy@lincode.ai"
+receiver ="divyasai.lakshmi@lincode.ai" # "shyam.gupta@lincode.ai"
 filename = file_names
 password =  "cokywtbgeezhqjwz" # "cokywtbgeezhqjwz" # "wedpyxysjvsvyjbe" # personal -  mr
 message = send_mail_attcach(sender,password,receiver,filename)
@@ -134,5 +134,9 @@ message = send_mail_attcach(sender,password,receiver,filename)
 
 print(message)
 
+from datetime import datetime
+fw = open("logs.txt","w")
+fw.write(str(datetime.now()))
+fw.close()
 
 

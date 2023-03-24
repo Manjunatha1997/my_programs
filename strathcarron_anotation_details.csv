@@ -1,0 +1,5 @@
+,Total Images,Total Annotated Images,Total UnAnnotated Images,Total Bounding Box,Domain,Part ID,Part Name
+0,0,0,0,0,strathcarron,63f8bea621af3e48eb6f92e2,highpressurehose
+1,0,0,0,0,strathcarron,63f8bea91b5132804ad5239f,persondetection
+2,0,0,0,0,strathcarron,63f8beaa21af3e48eb6f92e7,persondetection
+3,0,0,0,0,strathcarron,63f8beba21af3e48eb6f92ec,peepsdetection

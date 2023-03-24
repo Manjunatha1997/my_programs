@@ -1,5 +1,5 @@
 ,Total Images,Total Annotated Images,Total UnAnnotated Images,Total Bounding Box,Domain,Part ID,Part Name
-0,416,416,0,2012,livis,61b6eeed003516a5c978328a,Wheel
+0,419,416,3,2012,livis,61b6eeed003516a5c978328a,Wheel
 1,25,24,1,49,livis,61bae9cac70addeda9b5c47b,MCB
 2,50,50,0,100,livis,61bc6ba8c70addeda9b5d3a9,MCB001
 3,28,28,0,56,livis,61c01994c70addeda9b5ec0d,xc60_c_63A
@@ -11,154 +11,305 @@
 9,16,16,0,744,livis,61c9f6824c57789ea9f6f916,TASL
 10,12,12,0,692,livis,61cb0c229f5c1a76a48529dc,TASL
 11,98,90,8,218,livis,61cd5fa2a55f34b129181d14,Schneider_MCB
-12,39,37,2,267,livis,61ce9dbd4775cceb3df98a27,Housing
+12,115,37,78,267,livis,61ce9dbd4775cceb3df98a27,Kat-bolt
 13,4,4,0,1540,livis,61d2838ebbeac55c877df25c,Fabric
 14,1,1,0,1,livis,61d2d90534356a0b602ab06d,API_part1
-15,92,92,0,369,livis,61d3e41ec3743c84bfbb51d7,MCB_6th_Demo
+15,96,92,4,369,livis,61d3e41ec3743c84bfbb51d7,MCB_6th_Demo
 16,36,36,0,84,livis,61d410cc0a26266b773d41c9,PCBA_6th_Demo
-17,126,126,0,335,livis,61d4257708f3e625aa6b3b26,Bottle Inspection
-18,69,69,0,504,livis,61d43c5808f3e625aa6b3c3f,Rim
-19,70,65,5,329,livis,61d4452a08f3e625aa6b3cd6,ACB
+17,125,125,0,332,livis,61d4257708f3e625aa6b3b26,Bottle Inspection
+18,77,69,8,504,livis,61d43c5808f3e625aa6b3c3f,Rim
+19,77,65,12,329,livis,61d4452a08f3e625aa6b3cd6,ACB
 20,78,78,0,185,livis,61d5725b64bb6cc45bef4359,PCBA_AB02797892
-21,122,50,72,50,livis,61dd26cf64bb6cc45bef4851,Board_PH003
+21,125,50,75,50,livis,61dd26cf64bb6cc45bef4851,Board_PH003
 22,476,476,0,560,livis,61dd7dbc64bb6cc45bef49de,boxes
 23,63,63,0,147,livis,61dfd50864bb6cc45bef4bbd,METAL
 24,100,100,0,152,livis,61dfd60e64bb6cc45bef4c0a,MDV002
-25,1140,1140,0,1355,livis,61e26eae64bb6cc45bef4f91,carton box defects
-26,35,16,19,415,livis,61e8f13b398792ecff15c543,Board_PH002
-27,244,244,0,416,livis,61e8ff64398792ecff15c5e3,Board_PH001
-28,54,54,0,142,livis,61fa547d5d3e95fd7dfea9f4,conveyor
-29,9,9,0,28,livis,61fcc3605d3e95fd7dfeb035,Bearing
-30,0,0,0,0,livis,620617515d3e95fd7dfee0a9,test_11feb
-31,748,748,0,1500,livis,620a36705d3e95fd7dfefb05,TASL1
-32,1141,1141,0,1757,livis,620a3fa95d3e95fd7dfefdff,base
-33,93,92,1,92,livis,620b58385d3e95fd7dff095d,Crank sensera
-34,62,62,0,62,livis,620b77725d3e95fd7dff0a1c,Crank-sansera
-35,182,182,0,5936,livis,620cf3e65d3e95fd7dff12a8,wistron
-36,36,36,0,143,livis,6213380a5d3e95fd7dff1b35,BN321
-37,98,96,2,274,livis,6215d2ff5d3e95fd7dff20e1,sansera_stem_bracket
-38,426,426,0,1349,livis,6215d6f25d3e95fd7dff20fb,Transfer_learning
-39,52,52,0,264,livis,6215d7185d3e95fd7dff2107,ACB_Mechanism
-40,168,168,0,345,livis,6215ffc65d3e95fd7dff2450,Outer_ball_joint
-41,78,78,0,156,livis,621608745d3e95fd7dff25ad,gear rim blank001
-42,105,105,0,105,livis,621720855d3e95fd7dff29ec,maini
-43,0,0,0,0,livis,621734dd5d3e95fd7dff2c23,crankshaft
-44,523,523,0,573,livis,62175c925d3e95fd7dff2d89,Napino
-45,83,83,0,83,livis,62176adb5d3e95fd7dff2da4,push_rod
-46,20,20,0,73,livis,621798a95d3e95fd7dff2e83,PCBA_Schneider
-47,27,27,0,211,livis,6218a5c95d3e95fd7dff321b,Napino_pin
-48,22,22,0,67,livis,621a06745d3e95fd7dff343f,Act5
-49,48,48,0,194,livis,621f1e9e7fc5888fec5d6a1a,CNC
-50,12,0,12,0,livis,62220c98afb767d240a2aab3,CNC23
-51,423,423,0,3259,livis,6226f5925fed20c617f6f0c8,generic-fod
-52,71,71,0,212,livis,6226fa865fed20c617f6f1f5,MCB002
-53,55,55,0,440,livis,62284695335e02ec7fddb108,crackshaft_001
-54,0,0,0,0,livis,622852d52754fe71976fb570,stem-bracket_001
-55,75,75,0,75,livis,622857be2754fe71976fb65a,RoofSide-PlasticHousing
-56,1564,1260,304,1261,livis,6228722d2754fe71976fbb18,conrod
-57,17,7,10,16,livis,622997032754fe71976fc207,UL20-Housing
-58,1562,1562,0,5690,livis,622b25fdf71af28538b03b60,smart-ups
-59,41,41,0,67,livis,622b48b377305c9b70baee1f,Sansera-Demo-Josh
-60,4,2,2,3,livis,622f11d0af77f76e35f7ce81,cnc
-61,185,185,0,741,livis,622f17c1af77f76e35f7cec4,Roller-Bearing
-62,65,65,0,3068,livis,622f2ad1af77f76e35f7d03e,Stemrod-count001
-63,56,56,0,414,livis,6230289eaf77f76e35f7d47e,bluedoor
-64,871,870,1,2130,livis,62308b3fe6b9eee633945dfb,Helical-Gear
-65,33,33,0,73,livis,62309197e6b9eee63394621b,Metal Insert UKL VDC
-66,102,2,100,7,livis,6230af70e6b9eee63394634e,Metal Injection part
-67,299,299,0,299,livis,62318341e6b9eee63394642d,MHCP123
-68,23,18,5,166,livis,6231b1fae6b9eee633946895,PCBUVBoard1
-69,749,749,0,1186,livis,62321e93c8bf41a6fef346fe,bluedoor_label
-70,66,66,0,502,livis,6232caf1cd3e1eccb00b9957,IFB_IDU
-71,2484,2484,0,17335,livis,62386d4c8fe30453feeeefd6,GEAR-RIM-BLANK
-72,45,45,0,70,livis,6238a3ef8fe30453feeef042,BLUE-DOOR002
-73,90,90,0,1819,livis,623959178fe30453feeef85d,bluedoor003
-74,126,126,0,155,livis,62395a6c8fe30453feeef8c1,bluedoor004
-75,72,72,0,1221,livis,6239752e8fe30453feeefd0e,BEARING
-76,461,461,0,934,livis,62399fe68fe30453feeefe71,TE_Connectivity
-77,100,100,0,6437,livis,6239a7a98fe30453feef009a,Rear Acoustic Panel
-78,174,170,4,2219,livis,623ad5e02c6ed1634b1c8af0,Rear Acoustic Panel001
-79,442,442,0,560,livis,623afcdb2c6ed1634b1c8e31,flame001
-80,22,22,0,22,livis,623b1d71dda23fae697f7837,Fersa Bearing
-81,2234,2234,0,4845,livis,62417e0a85ad7470be7ef1a4,Smaarc-PCB
-82,12,12,0,12,livis,62418b5369bcaf39f338a704,A4476310800 Bumper holding cover
-83,249,249,0,491,livis,6241913348e5182c18f47508,Connectors
-84,526,526,0,526,livis,6241b4f567842b5b0bffb911,clutch_gear_ring
-85,588,588,0,3522,livis,624202bf67842b5b0bffbc0f,clutch_gear_spring
-86,28,28,0,30,livis,6242056667842b5b0bffbc1c,KAT Bolts
-87,1,1,0,1,livis,6242d7f343d80eca31b918fa,0ME323331 Gear
-88,486,486,0,557,livis,6242efd843d80eca31b919d9,FOD001
-89,13,10,3,42,livis,624ada550ea5a498d5f99e50,SE-Empty
-90,40,35,5,532,livis,624c4bd1077836c1c04d15c5,Cattini
-91,54,52,2,52,livis,624d79bb1d78362dbd724a15,Carbide Seal
-92,1098,1098,0,1122,livis,624e7a26bdca201b2a097df8,crimpt-wire
-93,44,44,0,1584,livis,6253dec63f5153cabdbf3b53,ocr
-94,62,62,0,62,livis,625400333f5153cabdbf3cf5,ominimatrix
-95,33,33,0,176,livis,62541b453f5153cabdbf3e43,seal
-96,227,227,0,393,livis,6254521f3f5153cabdbf3f68,sansera sweden
-97,46,46,0,46,livis,62552cfd3f5153cabdbf4279,sansera con rod (inner chamfer)
-98,69,69,0,144,livis,6255554d3f5153cabdbf4521,sansera-screw
-99,71,71,0,95,livis,625558c23f5153cabdbf4616,sansera-chip-off
-100,88,88,0,105,livis,62555e673f5153cabdbf4727,sansera-scratch
-101,198,198,0,198,livis,625561603f5153cabdbf47b3,sansera-chamfer
-102,668,667,1,2668,livis,6257b589862df6ab5c7d2df8,ocr
-103,1386,1386,0,9713,livis,6258123f862df6ab5c7d316f,bluedoor_17_opticalcable
-104,330,330,0,330,livis,625813cd862df6ab5c7d36e4,bluedoor_8.1_op3614ab_pcba
-105,385,385,0,2299,livis,62581488862df6ab5c7d383b,bluedoor_8.2_check_capacitor
-106,671,671,0,4268,livis,6258156e862df6ab5c7d39cd,bluedoor_8.3_cables_tie
-107,113,110,3,2310,livis,62584ca8862df6ab5c7d3cf8,21 teeth
-108,0,0,0,0,livis,625d1c0d862df6ab5c7d424c,crankshaft_002
-109,704,704,0,704,livis,625d2c70eba042188abb23fe,bluedoor_2.2_insulator_presence
-110,484,484,0,1771,livis,625d3340954c9207eb2b1ae4,bluedoor_2.3_a_check_for_screw
-111,473,473,0,2354,livis,625e4775954c9207eb2b1dee,bluedoor_2.3_b_connector
-112,561,561,0,1144,livis,625e8362954c9207eb2b2021,bluedoor_2.1_qrlabel
-113,530,264,266,264,livis,625e9329954c9207eb2b23a8,schneider part
-114,429,429,0,561,livis,625eaac3954c9207eb2b2770,bluedoor_11_paper_insulator
-115,514,440,74,516,livis,62638a90954c9207eb2b2f89,electrical-connectors
-116,1274,1274,0,1274,livis,626794ffd6d367105204f2ab,tsal_6
-117,1026,1026,0,2564,livis,6267ed97d6d367105204f929,yoke
-118,50,44,6,257,livis,626807e1d6d367105204fda7,fod_prepreg
-119,90,90,0,24206,livis,626ba9279811b9fb2d658228,solar_panel
-120,51,51,0,663,livis,6270cce3acbb41d6d2c48b98,mnx 45-80
-121,43,43,0,172,livis,6270ceacacbb41d6d2c48be4,mnx 95-140
-122,473,473,0,3201,livis,6271317eacbb41d6d2c48faf,bluedoor_2.3_b
-123,100,97,3,683,livis,6273636d4f8dd6b9919c2103,johnson
-124,52,52,0,78,livis,6278b4504f8dd6b9919c273d,autent
-125,62,62,0,123,livis,627a52a418cdbd899b5ec8a4,miniature circuit breaker
-126,141,141,0,282,livis,627a5ac218cdbd899b5ec937,coil 
-127,205,205,0,753,livis,627cafc1ace96f70ccc3a50e,mcb-usa_demo
-128,78,60,18,172,livis,627cee84ace96f70ccc3a83c,ola s1
-129,323,316,7,1920,livis,627e4414ace96f70ccc3abe3,mccb
-130,397,317,80,462,livis,6283b95dace96f70ccc3b2e8,blockage detection
-131,1005,1005,0,1008,livis,628f14ceace96f70ccc3c6c4,piston
-132,36,26,10,139,livis,629071b919a38c37de1deb14,customer1-stembracket
-133,78,74,4,156,livis,629cb8ad58ee0a9214873196,carton-box
-134,106,106,0,127,livis,629f35df607a66899edc33c4,piston-pin
-135,229,178,51,318,livis,62a0ca27b0a3f34381002a49,surface 
-136,30,30,0,60,livis,62a99845c307d7e96c9e8318,pcb-board
-137,83,83,0,83,livis,62a9ac9b52288efba325a859,housing - mounting bushes inspection
-138,42,33,9,35,livis,62aabcbfe2b5bb31d32ea813,piston head
-139,43,42,1,185,livis,62b58519c7011c3f6be9eb35,nissan - porosity detection
-140,28,24,4,356,livis,62b944e2f4542d1c2687404d,door_inspection
-141,26,26,0,52,livis,62b95b125f6da6eeb15a93f9,door_inspection_front
-142,29,28,1,28,livis,62c52b0fc28765386b0e9c57,conrod001
-143,157,140,17,1534,livis,62c53231ed8730a55e70d882,housing-part
-144,27,27,0,81,livis,62c6a9189cb4f4b761bda906,pulley
-145,36,36,0,37,livis,62c6d52f51aff2c5a88be1e6,firstronics-ledinspection
-146,53,53,0,53,livis,62c6f96f1d7fcb786448f48e,cylinder block
-147,155,93,62,634,livis,62c6fd3ba4a3e587aff373b5,sony-pcb
-148,62,30,32,57,livis,62c860c9214185e1f85ba560,cylinder block side
-149,32,32,0,32,livis,62e77d5feac3777b4ac263a0,demo-part
-150,0,0,0,0,livis,62ecb1b4c30b4c22dc9b6254,test-part
-151,29,29,0,37,livis,62f37313cc03f6f6f10117e9,c-coating002
-152,4,3,1,3,livis,632468dd9b1072f630379558,bolt-pin-inspection
-153,28,28,0,28,livis,632c0025f345c1eeecfea21a,piston
-154,113,113,0,214,livis,6332a6376ba92a4848dbda4b,osmo
-155,36,1,35,2,livis,636a49a45edea6479e20d453,kat-bolts
-156,64,30,34,420,livis,63884a5340d679bc6cb5cb69,hemlock
-157,0,0,0,0,livis,63b2695ed1ae68da8f028b39,leather_hide
-158,50,50,0,50,livis,63b3c7f13846355fe9f4dc7f,internal
-159,8,8,0,31,livis,63c930ccc8b3c43324fa7886,test
-160,15,15,0,31,livis,63d75e1c94cb801df1bc5844,testing_bnd
-161,36,1,35,1,livis,63f4e368e951bd6505565097,demo
-162,0,0,0,0,livis,6401c5401348643faa512399,surface
+25,65,65,0,105,livis,61e034f864bb6cc45bef4e4c,BOTTLE
+26,1140,1140,0,1355,livis,61e26eae64bb6cc45bef4f91,carton box defects
+27,35,16,19,415,livis,61e8f13b398792ecff15c543,Board_PH002
+28,244,244,0,416,livis,61e8ff64398792ecff15c5e3,Board_PH001
+29,54,54,0,142,livis,61fa547d5d3e95fd7dfea9f4,conveyor
+30,9,9,0,28,livis,61fcc3605d3e95fd7dfeb035,Bearing
+31,48,0,48,0,livis,620617515d3e95fd7dfee0a9,test_11feb
+32,748,748,0,1500,livis,620a36705d3e95fd7dfefb05,TASL1
+33,1141,1141,0,1757,livis,620a3fa95d3e95fd7dfefdff,base
+34,93,92,1,92,livis,620b58385d3e95fd7dff095d,Crank sensera
+35,62,62,0,62,livis,620b77725d3e95fd7dff0a1c,Crank-sansera
+36,182,182,0,5936,livis,620cf3e65d3e95fd7dff12a8,wistron
+37,36,36,0,143,livis,6213380a5d3e95fd7dff1b35,BN321
+38,98,96,2,274,livis,6215d2ff5d3e95fd7dff20e1,sansera_stem_bracket
+39,426,426,0,1349,livis,6215d6f25d3e95fd7dff20fb,Transfer_learning
+40,52,52,0,264,livis,6215d7185d3e95fd7dff2107,ACB_Mechanism
+41,168,168,0,345,livis,6215ffc65d3e95fd7dff2450,Outer_ball_joint
+42,78,78,0,156,livis,621608745d3e95fd7dff25ad,gear rim blank001
+43,105,105,0,105,livis,621720855d3e95fd7dff29ec,maini
+44,286,286,0,494,livis,621734dd5d3e95fd7dff2c23,crankshaft
+45,523,523,0,573,livis,62175c925d3e95fd7dff2d89,Napino
+46,83,83,0,83,livis,62176adb5d3e95fd7dff2da4,push_rod
+47,20,20,0,73,livis,621798a95d3e95fd7dff2e83,PCBA_Schneider
+48,27,27,0,211,livis,6218a5c95d3e95fd7dff321b,Napino_pin
+49,22,22,0,67,livis,621a06745d3e95fd7dff343f,Act5
+50,47,47,0,191,livis,621f1e9e7fc5888fec5d6a1a,CNC
+51,12,0,12,0,livis,62220c98afb767d240a2aab3,CNC23
+52,423,423,0,3259,livis,6226f5925fed20c617f6f0c8,generic-fod
+53,71,71,0,212,livis,6226fa865fed20c617f6f1f5,MCB002
+54,55,55,0,440,livis,62284695335e02ec7fddb108,crackshaft_001
+55,129,129,0,461,livis,622852d52754fe71976fb570,stem-bracket_001
+56,75,75,0,75,livis,622857be2754fe71976fb65a,RoofSide-PlasticHousing
+57,1261,1260,1,1261,livis,6228722d2754fe71976fbb18,conrod
+58,17,7,10,16,livis,622997032754fe71976fc207,UL20-Housing
+59,1562,1562,0,5690,livis,622b25fdf71af28538b03b60,smart-ups
+60,41,41,0,67,livis,622b48b377305c9b70baee1f,Sansera-Demo-Josh
+61,4,2,2,3,livis,622f11d0af77f76e35f7ce81,cnc
+62,185,185,0,741,livis,622f17c1af77f76e35f7cec4,Roller-Bearing
+63,65,65,0,3068,livis,622f2ad1af77f76e35f7d03e,Stemrod-count001
+64,56,56,0,414,livis,6230289eaf77f76e35f7d47e,bluedoor
+65,874,870,4,2130,livis,62308b3fe6b9eee633945dfb,Helical-Gear
+66,33,33,0,73,livis,62309197e6b9eee63394621b,Metal Insert UKL VDC
+67,102,2,100,7,livis,6230af70e6b9eee63394634e,Metal Injection part
+68,299,299,0,299,livis,62318341e6b9eee63394642d,MHCP123
+69,23,18,5,166,livis,6231b1fae6b9eee633946895,PCBUVBoard1
+70,749,749,0,1186,livis,62321e93c8bf41a6fef346fe,bluedoor_label
+71,66,66,0,502,livis,6232caf1cd3e1eccb00b9957,IFB_IDU
+72,2484,2484,0,17335,livis,62386d4c8fe30453feeeefd6,GEAR-RIM-BLANK
+73,45,45,0,70,livis,6238a3ef8fe30453feeef042,BLUE-DOOR002
+74,90,90,0,1819,livis,623959178fe30453feeef85d,bluedoor003
+75,126,126,0,155,livis,62395a6c8fe30453feeef8c1,bluedoor004
+76,72,72,0,1221,livis,6239752e8fe30453feeefd0e,BEARING
+77,461,461,0,934,livis,62399fe68fe30453feeefe71,TE_Connectivity
+78,100,100,0,6437,livis,6239a7a98fe30453feef009a,Rear Acoustic Panel
+79,174,170,4,2219,livis,623ad5e02c6ed1634b1c8af0,Rear Acoustic Panel001
+80,442,442,0,560,livis,623afcdb2c6ed1634b1c8e31,flame001
+81,22,22,0,22,livis,623b1d71dda23fae697f7837,Fersa Bearing
+82,2234,2234,0,4845,livis,62417e0a85ad7470be7ef1a4,Smaarc-PCB
+83,12,12,0,12,livis,62418b5369bcaf39f338a704,A4476310800 Bumper holding cover
+84,249,249,0,491,livis,6241913348e5182c18f47508,Connectors
+85,526,526,0,526,livis,6241b4f567842b5b0bffb911,clutch_gear_ring
+86,587,587,0,3516,livis,624202bf67842b5b0bffbc0f,clutch_gear_spring
+87,775,773,2,1977,livis,6242056667842b5b0bffbc1c,kat bolts
+88,1,1,0,1,livis,6242d7f343d80eca31b918fa,0ME323331 Gear
+89,486,486,0,557,livis,6242efd843d80eca31b919d9,FOD001
+90,13,10,3,42,livis,624ada550ea5a498d5f99e50,SE-Empty
+91,40,35,5,532,livis,624c4bd1077836c1c04d15c5,Cattini
+92,54,52,2,52,livis,624d79bb1d78362dbd724a15,Carbide Seal
+93,1098,1098,0,1122,livis,624e7a26bdca201b2a097df8,crimpt-wire
+94,44,44,0,1584,livis,6253dec63f5153cabdbf3b53,ocr
+95,62,62,0,62,livis,625400333f5153cabdbf3cf5,ominimatrix
+96,33,33,0,176,livis,62541b453f5153cabdbf3e43,seal
+97,227,227,0,393,livis,6254521f3f5153cabdbf3f68,sansera sweden
+98,46,46,0,46,livis,62552cfd3f5153cabdbf4279,sansera con rod (inner chamfer)
+99,69,69,0,144,livis,6255554d3f5153cabdbf4521,sansera-screw
+100,71,71,0,95,livis,625558c23f5153cabdbf4616,sansera-chip-off
+101,88,88,0,105,livis,62555e673f5153cabdbf4727,sansera-scratch
+102,198,198,0,198,livis,625561603f5153cabdbf47b3,sansera-chamfer
+103,668,667,1,2668,livis,6257b589862df6ab5c7d2df8,ocr
+104,1386,1386,0,9713,livis,6258123f862df6ab5c7d316f,bluedoor_17_opticalcable
+105,330,330,0,330,livis,625813cd862df6ab5c7d36e4,bluedoor_8.1_op3614ab_pcba
+106,385,385,0,2299,livis,62581488862df6ab5c7d383b,bluedoor_8.2_check_capacitor
+107,671,671,0,4268,livis,6258156e862df6ab5c7d39cd,bluedoor_8.3_cables_tie
+108,113,110,3,2310,livis,62584ca8862df6ab5c7d3cf8,21 teeth
+109,550,550,0,550,livis,625d1c0d862df6ab5c7d424c,crankshaft_002
+110,704,704,0,704,livis,625d2c70eba042188abb23fe,bluedoor_2.2_insulator_presence
+111,484,484,0,1771,livis,625d3340954c9207eb2b1ae4,bluedoor_2.3_a_check_for_screw
+112,473,473,0,2354,livis,625e4775954c9207eb2b1dee,bluedoor_2.3_b_connector
+113,561,561,0,1144,livis,625e8362954c9207eb2b2021,bluedoor_2.1_qrlabel
+114,530,264,266,264,livis,625e9329954c9207eb2b23a8,schneider part
+115,429,429,0,561,livis,625eaac3954c9207eb2b2770,bluedoor_11_paper_insulator
+116,514,440,74,516,livis,62638a90954c9207eb2b2f89,electrical-connectors
+117,1294,1294,0,1294,livis,626794ffd6d367105204f2ab,tsal_6
+118,1026,1026,0,2564,livis,6267ed97d6d367105204f929,yoke
+119,50,44,6,257,livis,626807e1d6d367105204fda7,fod_prepreg
+120,90,90,0,24206,livis,626ba9279811b9fb2d658228,solar_panel
+121,51,51,0,663,livis,6270cce3acbb41d6d2c48b98,mnx 45-80
+122,43,43,0,172,livis,6270ceacacbb41d6d2c48be4,mnx 95-140
+123,473,473,0,3201,livis,6271317eacbb41d6d2c48faf,bluedoor_2.3_b
+124,100,97,3,683,livis,6273636d4f8dd6b9919c2103,johnson
+125,52,52,0,78,livis,6278b4504f8dd6b9919c273d,autent
+126,62,62,0,123,livis,627a52a418cdbd899b5ec8a4,miniature circuit breaker
+127,141,141,0,282,livis,627a5ac218cdbd899b5ec937,coil 
+128,205,205,0,753,livis,627cafc1ace96f70ccc3a50e,mcb-usa_demo
+129,78,60,18,172,livis,627cee84ace96f70ccc3a83c,ola s1
+130,320,316,4,1920,livis,627e4414ace96f70ccc3abe3,mccb
+131,397,317,80,462,livis,6283b95dace96f70ccc3b2e8,blockage detection
+132,1005,1005,0,1008,livis,628f14ceace96f70ccc3c6c4,piston
+133,36,26,10,139,livis,629071b919a38c37de1deb14,customer1-stembracket
+134,78,74,4,156,livis,629cb8ad58ee0a9214873196,carton-box
+135,106,106,0,127,livis,629f35df607a66899edc33c4,piston-pin
+136,218,178,40,318,livis,62a0ca27b0a3f34381002a49,surface 
+137,30,30,0,60,livis,62a99845c307d7e96c9e8318,pcb-board
+138,83,83,0,83,livis,62a9ac9b52288efba325a859,housing - mounting bushes inspection
+139,42,33,9,35,livis,62aabcbfe2b5bb31d32ea813,piston head
+140,43,42,1,185,livis,62b58519c7011c3f6be9eb35,nissan - porosity detection
+141,28,24,4,356,livis,62b944e2f4542d1c2687404d,door_inspection
+142,26,26,0,52,livis,62b95b125f6da6eeb15a93f9,door_inspection_front
+143,0,0,0,0,livis,62becce017cf25a781b40e24,kuch to dala de
+144,0,0,0,0,livis,62beccec17cf25a781b40e27,kuch to dala de
+145,34,27,7,28,livis,62c52b0fc28765386b0e9c57,conrod001
+146,142,141,1,1544,livis,62c53231ed8730a55e70d882,housing-part
+147,27,27,0,81,livis,62c6a9189cb4f4b761bda906,pulley
+148,38,36,2,37,livis,62c6d52f51aff2c5a88be1e6,firstronics-ledinspection
+149,53,53,0,53,livis,62c6f96f1d7fcb786448f48e,cylinder block
+150,176,90,86,631,livis,62c6fd3ba4a3e587aff373b5,sony-pcb
+151,27,27,0,78,livis,62c860c9214185e1f85ba560,cylinder block side
+152,168,168,0,171,livis,62d11952fe147e24ec3e0364,gearassembly
+153,324,324,0,720,livis,62d7a8038d169d415eb67f55,medical
+154,127,127,0,286,livis,62d8ed50aa7822c0db04ff35,moulded switch
+155,28,28,0,28,livis,62da5f5211841961e4b372e4,c -coating
+156,285,285,0,329,livis,62e3b09efa540d76b2a698ef,plugcv
+157,27,27,0,27,livis,62e5f9cde5482b6aecb9fbd8,back plate_big
+158,26,26,0,52,livis,62e5fc84de886ab669b3060b,back_plate_small
+159,143,143,0,858,livis,62ea3440f479a31374164991,wp_tbk
+160,23,23,0,258,livis,62ea43c72f3485aa21bd9500,wp_tdk_blow
+161,63,63,0,63,livis,62ea54692c207f8fdfc978a0,break_pad
+162,52,52,0,82,livis,62f0a43f81c8812e05095e2e,washer inspection big
+163,96,96,0,96,livis,62f0b2ce7858a0b55e6e6bd0,tdk_part2
+164,74,71,3,628,livis,62f0cd3bfdea0749efef045c,led
+165,38,38,0,43,livis,62f11cee6c824ffd48a6a60e,back-plate
+166,184,184,0,218,livis,62f136d979a18b0174bf5089,washer inspection small
+167,85,85,0,109,livis,62f13910f3d2029175962c36,break_pad_2
+168,120,113,7,152,livis,62f27c452a25cf06024a0de0,c-coating001
+169,50,50,0,171,livis,62f34b3623eeb8dc71890d15,piston head
+170,141,141,0,228,livis,62f365a920fb9bd2b775d02e,flange inspection
+171,54,50,4,109,livis,62f39affcb48ca7eb559688a,piston_head_top
+172,88,62,26,62,livis,62f489db32d7c03ae805e884,piston_head_side
+173,41,41,0,41,livis,630468ab86a9c35b797efc89,output-shaft
+174,69,68,1,193,livis,630477af3e3cfa4539de3343,output-shaft001
+175,20,20,0,22,livis,6305f148f96d41857db4c984,machining chips
+176,128,128,0,235,livis,6305f90c45c7b6de7ca769d3,brass sheet
+177,156,156,0,397,livis,6306018e7c6b5c90a628f855,copper sheet
+178,31,25,6,52,livis,63076068b60421607bac3496,break pad
+179,54,39,15,87,livis,6308545c4cf17805a9edb1c5,washer2
+180,39,25,14,48,livis,6308bebd5421ed74d07d1d66,washer2_black_spot
+181,29,29,0,102,livis,63106e1d1f682faa5178aab3,washer_chipoff
+182,52,50,2,51,livis,6316f241d2df7345ef4b0f23,pad-printing
+183,26,26,0,26,livis,631734ff252ce823683229e4,gear-3617
+184,29,29,0,29,livis,631735ef72ceb1b6e1a71471,gear-3611
+185,66,66,0,528,livis,6319b3ddbba5b3707a79e73b,magnet sequence detection
+186,20,20,0,20,livis,6319d8f85a1917fb36c56d5e,pad printing s
+187,42,42,0,620,livis,631adf4daa7ca5e8db983328,car_iv_clip_pre/abs
+188,186,186,0,262,livis,631ebf0220723ad988134e57,washer001
+189,78,77,1,253,livis,631f46433ba8b77f76bb5cb2,rim
+190,98,98,0,98,livis,63216beddbbf9bb44b8e7b7e,striker
+191,20,20,0,20,livis,6321b75a70614f6e2e6037ee,pad printing abs
+192,40,40,0,40,livis,63240b07fce5c0dcda81d85b,striker-shot-mould
+193,39,39,0,39,livis,6324563a1d5e09a7b517f6e2,backplate-s
+194,85,85,0,85,livis,63245b05a962153f98b83b10,backplate-extra-material
+195,64,64,0,128,livis,6325f0a7ae74704625b1751a,backplate-extrapress
+196,37,37,0,37,livis,6325f90e8ce76c6712cdddf6,backplate-peep
+197,71,71,0,103,livis,6326099f8ce76c6712cdde00,backplate-impropercut
+198,199,199,0,1406,livis,632ad355883e3e74bea56fee,oil pump section
+199,50,50,0,50,livis,63317d3b587395641eb5c1f0,oka-wood
+200,156,156,0,156,livis,633274a8587395641eb5c200,seal ring differentiation
+201,117,117,0,492,livis,6332b0d5f9ae3093bc0c7604,mahindra fuel tank
+202,52,52,0,52,livis,6333f78b94c6122669a7ab53,sealring-56
+203,52,52,0,52,livis,6333fd39f1cf8e9c7f547821,sealring-34
+204,30,30,0,90,livis,633a69e7d46c1023f3bed599,black moulded part
+205,30,30,0,30,livis,633a6f9825fd4342f3ad8a5f,black connector
+206,30,30,0,30,livis,633a711d20827cb78932b9fa,grey end connector
+207,32,32,0,159,livis,633a7c6543b1274e6ddd3cef,grey moulded part
+208,104,103,1,103,livis,633ab3cad803def7fa9aa28e,flute_identification
+209,34,34,0,68,livis,633bcca7cbb4d12c125746f2,rubber seal twist detection
+210,35,34,1,34,livis,633bdb36368f0b44a24876b1,conrod
+211,60,60,0,746,livis,633bdbae20827cb78932ba20,reel inspection
+212,38,30,8,480,livis,633ef08d806a2220364320e4,valvespring-assembly
+213,30,30,0,413,livis,633fbb34b9895a1f4bc4a4f2,reel inspection #defect
+214,226,217,9,217,livis,63410a8459b502b2af5dab5c,fzs front
+215,105,105,0,423,livis,634138f9aa4428df830901f4,fzs back
+216,207,207,0,207,livis,6342b2d4ff1a724cf1ea0a50,re_piston_snap_ring_pre/abs
+217,309,309,0,309,livis,6342fd1d9345b1403eea7203,snap ring
+218,104,104,0,104,livis,635762037cc20f608da8c813,topcon_hiper_vr
+219,100,100,0,1172,livis,6357b8ba35f137188cde6843,clutch-gear-assembly
+220,100,100,0,2183,livis,6358dabdde779b7dacafb46d,clutch-gear-assembly-good
+221,30,30,0,152,livis,635a5f1d49be05c99c8b4d32,plate support inspection
+222,165,165,0,265,livis,635ceb930a58f53cb3ec2b90,classic-stripe-bounce
+223,200,200,0,200,livis,635f59c62452d7d228c26d20,classic-stripes-hero
+224,95,95,0,193,livis,635f825f75a764757faa6fb2,flange_inspection_2
+225,79,76,3,323,livis,636231703e58386d999ea16c,connecting_rod_internal_inspection
+226,83,83,0,316,livis,636249c7685902bc760a416a,connecting_rod_internal_inspection_big
+227,187,187,0,187,livis,63639cfb55b6b238bd050ec8,katbolt_orientation
+228,47,47,0,71,livis,6364b4e9f9fa53e517f696f7,covertop_17003
+229,64,64,0,149,livis,6364b8387e752fc0bd4c8216,fuel_cap_17003az
+230,287,287,0,287,livis,6369de9c6936fda9f421aaa0,fzs2_sticker
+231,328,328,0,328,livis,6369f9a49efb7e9313eb3640,thread_inspection_maclean_fogg
+232,302,302,0,303,livis,636c902f7691f297f2685f83,topcon
+233,400,400,0,400,livis,636cad0422ef3a8fbe76499e,thread_inspection_maclean_fogg_new
+234,146,146,0,146,livis,636cae89e596bea20cc2a88b,fzs_sticker_classify
+235,114,108,6,599,livis,63732afdab5ce4eb5d1d4153,ather_battery_inspection
+236,641,641,0,641,livis,6375e13e2e1ab0de404e633d,classic_stripes_hero
+237,201,201,0,201,livis,6375f4b9584f7e43c20444ae,classic stripes_glamour
+238,84,84,0,84,livis,6375f798dfd9387f609cb185,classic stripes_bounce infinity
+239,174,174,0,416,livis,637b26704ecd96e13e48d655,rivet
+240,82,82,0,167,livis,637c847889487186339d3679,graphite_pipe_inspection
+241,292,292,0,547,livis,637d306f4abd526607d43a96,porsche-pillar-part
+242,212,212,0,1076,livis,637df49aa2446cc00112291e,fzsback2
+243,338,338,0,878,livis,63848b22eb1718c30f8a7b3a,tubular_products
+244,699,699,0,1598,livis,6386f17d796c6be4ac062a4c,conrod-large
+245,31,31,0,46,livis,6388e21826e8ae327264e4c9,studinspection
+246,52,52,0,1768,livis,6396c1a6bbdb1621116b5cd9,pcb
+247,90,82,8,126,livis,639712bc00a1ae478aa59f23,fittings
+248,176,176,0,176,livis,639aef4f6c9df6ecae96d003,master_cylinder_thread_pa
+249,104,104,0,104,livis,639af57938f894848c93747d,master_cylinder_machining_oknok
+250,81,81,0,398,livis,63a068b094608bf119e721b7,engine_rotor_component
+251,32,32,0,95,livis,63a1cc1d200494f41dc49709,sheetmetal_punch
+252,600,37,563,37,livis,63abd1df0593cab7f03b5e9c,led_inspection
+253,315,314,1,1083,livis,63abd852c88cf6e4c2f44c8f,mat
+254,216,216,0,216,livis,63abd943c88cf6e4c2f44c94,led_inspection
+255,47,44,3,87,livis,63ad1ba8470f4de48f2575a5,bush
+256,195,179,16,338,livis,63ad6cc4f2e58ac5dbac2fd3,trelleborg
+257,100,100,0,200,livis,63b5124de1bbf61de8cbc1f8,fluorescent_spot_inspection_ndt
+258,40,40,0,320,livis,63b5403be1bbf61de8cbc258,short_shaft
+259,30,30,0,240,livis,63b541fc552eb9a969240ea5,sleeve
+260,72,72,0,1714,livis,63b69aa649da6c81b189ecd5,engine_component_inspection
+261,275,195,80,537,livis,63bbb4b685329351b3df3903,rap_hole
+262,150,139,11,1016,livis,63bc0ef433b9db229e6267e9,spicer
+263,55,30,25,97,livis,63bd3203acd86671c7538547,cor
+264,75,75,0,76,livis,63be545ff5175a878dd7015b,fittings-1
+265,2946,2946,0,10269,livis,63c4e75af3853ae5acb56531,generic-data
+266,30,30,0,30,livis,63c7c70d6dbf340be15af982,tata-motors-tyre
+267,89,89,0,89,livis,63c937fe8aa54b239c3ab682,porosity
+268,42,42,0,42,livis,63ce7383a4e6c233b22778e0,pcb-1
+269,32,32,0,1071,livis,63cfc45ca484cbf9508b9277,pcb-2
+270,128,123,5,123,livis,63cfdd6d14033115c9558a09,mat-logo
+271,41,40,1,1381,livis,63d36b6a1993d3a2f386fe0f,ocr-mat
+272,6086,6086,0,78177,livis,63d9ff2f0b34e15a2c0d9635,te_connectivity
+273,43,43,0,79,livis,63da10225dc46f6fcd4f4e3d,diaphragm_inspection
+274,1001,1001,0,1456,livis,63da130e5dc46f6fcd4f4e4c,radiator
+275,1039,1039,0,3987,livis,63dceefbd1002c17c51672f9,conrod-generic
+276,44648,44648,0,85375,livis,63e099169220d35eaae9e9ab,cylindrical_housing_component
+277,14885,14885,0,41689,livis,63e0abddfb5ab6c9819ea715,detzo_coil
+278,40,40,0,319,livis,63e0af48d1002c17c51675a4,metalic_ball
+279,2384,2381,3,29467,livis,63e0e0fb2f479191e252d546,pcba
+280,44,40,4,41,livis,63e0ea4f5a9a5f9a574a92e2,mat-ocr-test
+281,557,557,0,1032,livis,63e31a300dd36705003eca1b,yamaha_engine_assembly
+282,30,30,0,160,livis,63e339641689508b24bacdd4,mobile_drive_inspection
+283,156,156,0,341,livis,63ea06c19b5eebb41fb521b4,hole_inspection
+284,205,205,0,1883,livis,63eb29355d3109b77a01439c,engine
+285,226,204,22,1632,livis,63edd2073941163274fd695a,pentadesigners_compositesheet
+286,549,549,0,817,livis,63ef51fab60835c861f86fdf,engine-component
+287,180,5,175,37,livis,63fcb55b285ede27611a7596,locomotivesideinspection
+288,112,112,0,112,livis,63fd9035452aa3b422e6e40b,pistondefectinspection
+289,30,30,0,32,livis,63ff41acd730288724409c24,fastener
+290,415,415,0,638,livis,64008747d730288724409c7d,jbm part inspection
+291,2,2,0,3,livis,640eb481705ea0d7650ba0db,conrod
+292,461,461,0,519,livis,640efa5b34b40e64484cde5d,seal-inspection
+293,606,606,0,1665,livis,64100be3355d68aa082fb4a7,cam_shaft
+294,6315,6315,0,40943,livis,641168ff69bc75d701b2c670,panelboard_inspection
+295,2146,2146,0,13693,livis,641188bb55160f09aea4354d,power_block
+296,1996,1786,210,1786,livis,64118dbb6c8a02ecf9c3a9b4,clutch_assembly
+297,7923,7923,0,7926,livis,6411ac682e174b779d6c1b51,grommet
+298,3930,3930,0,30575,livis,6412b924c8e6c8bf2e863a3b,seneca_sheet_inspection
+299,484,484,0,484,livis,6412bb4c67ad860d9f60601c,berkeley_gear_teeth
+300,2703,2703,0,13447,livis,6412bf100f536ce5de29553a,glass_coater
+301,501,501,0,501,livis,6412c7157102247dbbae59c9,berkeley_wrong_oil_cooler_pump
+302,1620,1619,1,1619,livis,6412d0dea78614e0976697aa,berkeley_work_order_oilcooler_and_gear_teeth
+303,195,195,0,542,livis,6412eecdbd63627a34b961cf,grupo_antolin_leather
+304,391,388,3,4697,livis,64140dad8220b3ed57531cc2,pcba_op4832
+305,585,583,2,7231,livis,641411b4cc829fdfbec9a520,pcba_0p4847af
+306,80,80,0,80,livis,6414385a14ec5d05779b18ff,leather-chopped
+307,308,308,0,308,livis,6417ed2dc39dbb09a8e7ddb9,leather-paint
+308,81,81,0,173,livis,6417fd10002fee4a01d43145,leather-hole
+309,210,210,0,420,livis,641830aba17b1f9167a68699,pcba_op6513
+310,30,30,0,34,livis,6419451e393b484b4d8cef4a,leather-test
+311,432,432,0,5288,livis,64195bda2fd8cc4ec96b65a3,pcba_op4831
+312,51,51,0,1241,livis,64198d32a22b717274ff9894,demo_new
+313,79,79,0,155,livis,641bf4c697fb8a3745bf776f,gear_teeth

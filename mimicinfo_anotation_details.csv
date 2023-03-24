@@ -1,0 +1,6 @@
+,Total Images,Total Annotated Images,Total UnAnnotated Images,Total Bounding Box,Domain,Part ID,Part Name
+0,30,30,0,35,mimicinfo,63eca31057e909b664a2170e,kinetic_symetry
+1,556,556,0,594,mimicinfo,63edef182dcdb1337393f64d,bajaj
+2,131,131,0,150,mimicinfo,63f88d7dc865ea3694237160,bajaj_clamp
+3,40,15,25,254,mimicinfo,63fc9adfd0fab9079e89de96,sky_electroprocess
+4,40,40,0,450,mimicinfo,63fda654505efae5b41c9123,sky_electroprocess_new

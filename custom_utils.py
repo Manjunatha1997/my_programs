@@ -56,7 +56,7 @@ def send_mail(sender,password,receiver,filename):
 		# Log in to server using secure context and send email
 		context = ssl.create_default_context()
 
-		with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+		with smtplib.SMTP_SSL("smtp.gmail.com", 587, context=context) as server:
 			server.login(sender_email, password)
 			server.sendmail(sender_email, receiver_email, text)
 		return "Message sent sucessfully."
@@ -68,7 +68,7 @@ def send_mail(sender,password,receiver,filename):
 def send_mail_attcach(sender,password, receiver,files):
 
 	try:
-		subject = "Annotaion Details"
+		subject = "Annotaion Details from product"
 		body = f" Hi {receiver.split('.')[0]}, \n\n  Please find the attcahed files for the annotations details"
 		sender_email = sender
 		receiver_email = receiver
@@ -78,8 +78,8 @@ def send_mail_attcach(sender,password, receiver,files):
 		message = MIMEMultipart()
 		message["From"] = sender
 		message["To"] = receiver
-		# message["Cc"] = "niladri.das@lincode.ai"
-		# message["Cc"] = "sadakat.ali@lincode.ai"
+		message["Cc"] = "niladri.das@lincode.ai"
+		message["Cc"] = "manjunatha.reddy@lincode.ai"
 
 
 		message["Subject"] = subject

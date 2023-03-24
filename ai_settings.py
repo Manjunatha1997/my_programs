@@ -2,8 +2,8 @@
 SERVER_HOST = "localhost"
 
 #Settings for MongoDB
-MONGO_SERVER_HOST = '35.236.186.201' # dev machine
-MONGO_SERVER_PORT = 26000 
+MONGO_SERVER_HOST = '35.236.155.3' # dev machine
+MONGO_SERVER_PORT = 7778
 MONGO_DB = "LIVIS"
 INSPECTION_DATA_COLLECTION = "inspection_summary"
 MONGO_COLLECTION_PARTS = "parts"

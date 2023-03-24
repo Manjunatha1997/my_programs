@@ -1,0 +1,27 @@
+,Total Images,Total Annotated Images,Total UnAnnotated Images,Total Bounding Box,Domain,Part ID,Part Name
+0,92,92,0,202,gic,636253d43cd893d486c3d147,milleniumtechno tool
+1,61,61,0,247,gic,63787a810b906159594d6862,krishaveni
+2,84,84,0,168,gic,637b10dd21734830df689c7d,elcom2
+3,66,66,0,148,gic,637f22ab010d34988f130a9b,lumax
+4,118,0,118,0,gic,637f5834f939101028bb481b,taehwa
+5,99,99,0,244,gic,6391a86388fb86fa2663dab8,trelleborg
+6,105,105,0,105,gic,639d8d7a2927df4b4b42fdd1,minda_kosai
+7,155,155,0,1172,gic,63aed4ef5babb439210c091a,saroj-1
+8,91,91,0,261,gic,63b7c844fe883ab8c8f04bd3,shardarevise
+9,59,30,29,30,gic,63b7ce6fcf731bee916a5103,bearing
+10,213,213,0,371,gic,63bd1cc033b9db229e626841,trelleborg_1
+11,120,120,0,431,gic,63bd274acf731bee916a5248,ausa_medical_small_neddles
+12,159,0,159,0,gic,63bd27a13c069edf1fc27a70,ausa_medical_big_neddles
+13,80,80,0,80,gic,63bd3f4af0c6bc6488ccb329,asu_medical_nedlle_child_part
+14,48,48,0,144,gic,63bd4105152358cb54307405,engineering_plastic
+15,65,65,0,221,gic,63be5c946b4382b18abb1da4,saroj11dec
+16,90,90,0,90,gic,63bfb1cd39b576bb14f5fda3,glass_disk
+17,52,52,0,179,gic,63c910e54853702f0963aad8,banjo
+18,60,60,0,120,gic,63dcd03970cf83148a4211c7,shardaagain
+19,101,101,0,101,gic,63e4db4be99ec15214f63957,shardacham
+20,45,45,0,138,gic,6402e9411dbcbbf844e1b50f,lnm
+21,118,100,18,293,gic,6403388cd730288724409e45,banjo-1
+22,81,81,0,233,gic,640af7ea9a024a5a58f2ff1b,shardacham
+23,79,79,0,622,gic,640eb3432dd9dc78732a4650,pcb_defects
+24,84,84,0,103,gic,641063b74aa8f654d86052a3,trelleborg_2
+25,221,221,0,542,gic,641580f7ccec8e8ebf4bbf2b,ssf_plastics
