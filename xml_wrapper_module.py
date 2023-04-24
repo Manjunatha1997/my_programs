@@ -1,4 +1,5 @@
 
+from dataclasses import field
 from glob import glob
 from math import floor
 import os
@@ -45,6 +46,11 @@ def find_all_classes(path):
 			for elt in root.iter():
 				if elt.tag == 'name':
 					class_names.append(elt.text)				
+				# if elt.tag == "name" and elt.text =="chamfer_A":
+				# 	print(file)
+				# 	shutil.copyfile(os.path.join(path,file),os.path.join(r'C:\Users\Manju\Downloads\main_data_maini_verified\main_data_maini_verified\main_data\chamfer_absence',file))
+				# 	shutil.copyfile(os.path.join(path,file.replace('.xml','.jpg')),os.path.join(r'C:\Users\Manju\Downloads\main_data_maini_verified\main_data_maini_verified\main_data\chamfer_absence',file.replace('.xml','.jpg')))
+
 	temp = {}
 	for i in set(class_names):
 		temp[i] = class_names.count(i)
