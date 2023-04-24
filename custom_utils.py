@@ -23,7 +23,7 @@ def send_mail(sender,password,receiver,filename):
 		message = MIMEMultipart()
 		message["From"] = sender
 		message["To"] = receiver
-		message["Cc"] = receiver
+		message["To"] = "manjunatha.reddy@lincode.ai"
 
 		message["Subject"] = subject
 		# message["Bcc"] = mail  # Recommended for mass emails

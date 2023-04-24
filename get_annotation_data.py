@@ -4,6 +4,7 @@ import pandas as pd
 import csv
 from custom_utils import *
 import bson
+from test_mul import *
 
 
 
@@ -63,7 +64,7 @@ for domain in domains_list:
 
         part_name = i['part_number']
 
-        mp_dataset  = MongoHelper().getCollection(f"{domain}{part_id}_dataset")
+        mp_dataset  = MongoHelper().getCollection(str(domain)+str(part_id)+"_dataset")
         mp_dataset_data = mp_dataset.find()
 
         for ann in mp_dataset_data:
@@ -120,17 +121,18 @@ for domain in domains_list:
     ## if the images found , then craete a csv file else No.
     if data_frame["Total Images"]:
         df = pd.DataFrame(data_frame)
-        df.to_csv(f"{domain}_anotation_details.csv")
-        file_names.append(f"{domain}_anotation_details.csv")
+        df.to_csv(domain+"_anotation_details.csv")
+        file_names.append(domain+"_anotation_details.csv")
 
 
 
-sender = "manjunatha.reddy@lincode.ai" 
-receiver ="divyasai.lakshmi@lincode.ai" # "shyam.gupta@lincode.ai"
-filename = file_names
-password =  "cokywtbgeezhqjwz" # "cokywtbgeezhqjwz" # "wedpyxysjvsvyjbe" # personal -  mr
-message = send_mail_attcach(sender,password,receiver,filename)
+#sender = "manjunatha.reddy@lincode.ai" 
+#receiver ="niladri.das@lincode.ai" # "shyam.gupta@lincode.ai"
+#filename = file_names
+#password =  "cokywtbgeezhqjwz" # "cokywtbgeezhqjwz" # "wedpyxysjvsvyjbe" # personal -  mr
+#message = send_mail_attcach(sender,password,receiver,filename)
 # message = send_mail(sender,password,receiver,filename[0])
+message = send_mail_attch("manjunatha.reddy@lincode.ai","cokywtbgeezhqjwz",["niladri.das@lincode.ai","manjunatha.reddy@lincode.ai"],file_names)
 
 print(message)
 
