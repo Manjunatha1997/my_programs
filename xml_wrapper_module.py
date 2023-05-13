@@ -56,6 +56,36 @@ def find_all_classes(path):
 		temp[i] = class_names.count(i)
 	return temp	
 
+def find_all_classes_recursive(path):
+	if not os.path.isdir(path):
+		return []
+	response = []
+	for root_path, directories, files in os.walk(path):
+		if directories == []:
+			directories = [path]
+		for directory in directories:
+			sub_dir = os.path.join(root_path,directory)
+			class_names = []
+			files = os.listdir(os.path.join(sub_dir))
+			for file in files:
+				if file.endswith('.xml'):
+					tree = ET.parse(os.path.join(sub_dir,file))
+					root = tree.getroot()
+					for elt in root.iter():
+						if elt.tag == 'name':
+							class_names.append(elt.text)				
+						
+			temp = {}
+			temp['folder_path'] = sub_dir
+			temp['total'] = len(class_names)
+			for i in set(class_names):
+				temp[i] = class_names.count(i)
+			
+			if len(class_names) != 0:
+				response.append(temp)
+
+	return response	
+
 
 def find_extra_images(input_path,remove=False,move=None):
 	"""

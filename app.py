@@ -62,22 +62,24 @@ action = st.selectbox("Select Action",('find_all_class_names',
 				 'change_image_xml',
 				 ))
 
-
-
 if action == 'find_all_class_names':
-	x = st.button('Get All Classes')
-	if x == True:
-		resp = find_all_classes(path)
-		if resp:
-			data_frame = pd.DataFrame(list(resp.values()),index=list(resp.keys()))
-			col1, col2 = st.columns(2)
-			with col1:
-				df = st.json(resp)
-			with col2:
-				st.bar_chart(data_frame)
-		else:
-			st.text("No classes found  ")
+	if not path:
+		st.warning("Please provide path")
+	resp = find_all_classes_recursive(path)
+	
+	if resp:
 
+		col1, col2 = st.columns(2)
+		with col1:
+			df = st.json(resp)
+		with col2:
+			df = pd.json_normalize(resp)
+
+			csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
+
+			# st.bar_chart(data_frame)
+	else:
+		st.text("No classes found  ")
 
 if action == 'find_un_annotated_images':
 	remove = st.radio("Remove ",('No', 'Yes') )
