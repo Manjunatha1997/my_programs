@@ -67,15 +67,19 @@ if action == 'find_all_class_names':
 		st.warning("Please provide path")
 	resp = find_all_classes_recursive(path)
 	
+	
 	if resp:
+		df = pd.json_normalize(resp)
+		csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
+		st.table(resp)
+		# col1, col2 = st.columns(2)
+		# with col1:
+		# 	df = st.json(resp)
+		# with col2:
+		# 	df = pd.json_normalize(resp)
 
-		col1, col2 = st.columns(2)
-		with col1:
-			df = st.json(resp)
-		with col2:
-			df = pd.json_normalize(resp)
-
-			csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
+		# 	csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
+		# 	st.table(resp)
 
 			# st.bar_chart(data_frame)
 	else:
