@@ -3,5 +3,5 @@ title Annotation Validation
 
 call activate manju
 
-"streamlit" "run" "D:\my_programs\app.py"
+"streamlit" "run" "app.py"
 pause
