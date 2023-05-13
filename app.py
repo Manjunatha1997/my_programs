@@ -54,7 +54,7 @@ if check_path == True:
 # 				 )
 
 action = st.selectbox("Select Action",('find_all_class_names',
-				 'find_no_class_names', 
+				 'find_empty_xml', 
 				 'find_un_annotated_images',
 				 'rename_class_names',
 				 'delete_class_names',
@@ -103,7 +103,7 @@ if action == 'find_un_annotated_images':
 			resp = find_extra_images(path,move=mv_path)
 			st.json(resp)
 
-if action == 'find_no_class_names':
+if action == 'find_empty_xml':
 	resp = find_no_class_names(path)
 	if resp:
 		st.text(resp)
