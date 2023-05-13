@@ -59,6 +59,7 @@ action = st.selectbox("Select Action",('find_all_class_names',
 				 'rename_class_names',
 				 'delete_class_names',
 				 'split_folder',
+				 'change_image_xml',
 				 ))
 
 
@@ -162,6 +163,16 @@ if action == 'delete_class_names':
 			st.json(resp)
 	else:
 		st.text("No classes found !!!")
+
+if action == 'change_image_xml':
+	if not path:
+		st.warning("Please provide path")
+
+	new_image_name = st.text_input("Enter new image name",placeholder="Type new image name here ")
+	btn = st.button('Submit')
+	if btn:
+		os.system(f"python change_image_xml.py {path} {new_image_name}")
+
 
 
 ## Remove footer of streamlit
