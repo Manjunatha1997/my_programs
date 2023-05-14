@@ -178,6 +178,7 @@ if action == 'change_image_xml':
 	btn = st.button('Submit')
 	if btn:
 		os.system(f"python change_image_xml.py {path} {new_image_name}")
+		st.success("Success")
 
 
 

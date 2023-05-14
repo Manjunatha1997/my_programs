@@ -7,6 +7,7 @@ import os
 import sys
 import glob
 import xml.etree.ElementTree as ET
+import bson
 
 def changefilenameinxml(directory,dst_xmllist):
     files = dst_xmllist
@@ -35,13 +36,19 @@ def changepathnameinxml(directory,dst_xmllist,dst_imglist):
     print("Successfully changed the 'path' tag inside the xmls...")
     return
 
+root_folder = os.path.join(sys.argv[1])
 name_prefix = sys.argv[2]
+name_prefix_temp = name_prefix
 
 
-for root, dirnames, filenames in os.walk(sys.argv[1]):
+for root, dirnames, filenames in os.walk(root_folder):
+    if dirnames == []:
+        dirnames = [os.path.join(root_folder)]
 
     for directory in dirnames:
         directory = os.path.join(root,directory)
+        bid = str(bson.ObjectId())
+        name_prefix = os.path.basename(directory) + name_prefix +  bid
 
         file_list = os.listdir(directory)
 
@@ -70,3 +77,4 @@ for root, dirnames, filenames in os.walk(sys.argv[1]):
        
         changefilenameinxml(directory,dst_xmllist)
         changepathnameinxml(directory,dst_xmllist,dst_imglist)
+        name_prefix = name_prefix_temp
