@@ -67,7 +67,7 @@ if action == 'find_all_class_names':
 					total_data[key] = value
 	if total_data:
 		## updatind folder path 
-		total_data['folder_path'] = ""
+		total_data['folder_path'] = path
 		# st.json(total_data)
 		resp.append(total_data)
 	
@@ -75,7 +75,7 @@ if action == 'find_all_class_names':
 		df = pd.json_normalize(resp)
 
 		## model for total data 
-		modal = Modal(key="model",title="Total individual data")
+		modal = Modal(key="model",title="Total Data")
 		col1, col2 = st.columns(2)
 		with col1:
 			open_modal = st.button("View Total Data")
