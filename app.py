@@ -1,15 +1,9 @@
-from hashlib import new
-from logging import PlaceHolder
-from tkinter.font import names
 import streamlit as st
 import os
 import pandas as pd
-import numpy as np
-from xml_wrapper_module import *
 from PIL import Image
-
-
 from streamlit_modal import Modal
+from xml_wrapper_module_updated import *
 
 
 
@@ -32,13 +26,13 @@ st.markdown("<h1 style='text-align: center;font-weight:bold; color: #4885A2;'>An
 
 path = st.text_input('Enter your input folder path !',placeholder="Enter your input folder path ")
 
-check_path = st.button('Check Path')
-if check_path == True:
-	resp_path = check_path_dir(path)
-	if resp_path == False:
-		st.warning("Please check your path ")
-	if resp_path == True:
-		st.success(" Select action and go !!! ")
+# check_path = st.button('Check Path')
+# if check_path == True:
+# 	resp_path = check_path_dir(path)
+# 	if resp_path == False:
+# 		st.warning("Please check your path ")
+# 	if resp_path == True:
+# 		st.success(" Select action and go !!! ")
 
 
 
@@ -141,7 +135,8 @@ if action == 'find_empty_xml':
 		st.text("No files found")
 
 if action == 'rename_class_names':
-	old_class_name = st.text_input('Enter class name',placeholder="Enter class name")
+	x = find_all_classes(path)
+	old_class_name = st.selectbox("Select class name ",list(x.keys()))
 	new_class_name = st.text_input('Enter new class name',placeholder="Enter new class name")
 
 	btn = st.button('Submit')
