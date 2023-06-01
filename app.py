@@ -9,7 +9,7 @@ from xml_wrapper_module import *
 from PIL import Image
 
 
-
+from streamlit_modal import Modal
 
 
 
@@ -43,16 +43,6 @@ if check_path == True:
 
 
 
-# action = st.radio("Select Action: ",
-# 				 ('find_all_class_names',
-# 				 'find_no_class_names', 
-# 				 'find_un_annotated_images',
-# 				 'rename_class_names',
-# 				 'delete_class_names',
-# 				 'split_folder',
-# 				 )
-# 				 )
-
 action = st.selectbox("Select Action",('find_all_class_names',
 				 'find_empty_xml', 
 				 'find_un_annotated_images',
@@ -66,11 +56,41 @@ if action == 'find_all_class_names':
 	if not path:
 		st.warning("Please provide path")
 	resp = find_all_classes_recursive(path)
-	
+
+	total_data = {}
+	if resp:
+		for item in resp:
+			for key, value in item.items():
+				if key in total_data:
+					total_data[key] += value
+				else:
+					total_data[key] = value
+	if total_data:
+		## updatind folder path 
+		total_data['folder_path'] = ""
+		# st.json(total_data)
+		resp.append(total_data)
 	
 	if resp:
 		df = pd.json_normalize(resp)
-		csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
+
+		## model for total data 
+		modal = Modal(key="model",title="Total individual data")
+		col1, col2 = st.columns(2)
+		with col1:
+			open_modal = st.button("View Total Data")
+		with col2:
+			csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
+
+		if open_modal:
+			modal.open()
+
+		if modal.is_open():
+			with modal.container():
+				st.json(total_data)
+
+
+		# csv_button = st.download_button(label="Download CSV",data=df.to_csv(index=False),file_name="annotation_count.csv",mime='text/csv')
 		st.table(resp)
 		# col1, col2 = st.columns(2)
 		# with col1:
