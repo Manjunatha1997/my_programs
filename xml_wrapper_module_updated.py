@@ -1,5 +1,4 @@
 
-from dataclasses import field
 from glob import glob
 from math import floor
 import os
@@ -61,12 +60,16 @@ def find_all_classes_recursive(path):
 	for root_path, directories, files in os.walk(path):
 		if directories == []:
 			directories = [path]
+		
+
 		for directory in directories:
+			xml_count = 0
 			sub_dir = os.path.join(root_path,directory)
 			class_names = []
 			files = os.listdir(os.path.join(sub_dir))
 			for file in files:
 				if file.endswith('.xml'):
+					xml_count += 1
 					tree = ET.parse(os.path.join(sub_dir,file))
 					root = tree.getroot()
 					for elt in root.iter():
@@ -75,7 +78,8 @@ def find_all_classes_recursive(path):
 						
 			temp = {}
 			temp['folder_path'] = sub_dir
-			temp['total'] = len(class_names)
+			temp['total bounding box'] = len(class_names)
+			temp["total annotated images"] = xml_count
 			for i in set(class_names):
 				temp[i] = class_names.count(i)
 			
@@ -250,7 +254,6 @@ def xml2txt(xml_dir,out_dir):
 	
 	transformer = Transformer(xml_dir=xml_dir, out_dir=out_dir)
 	transformer.transform()
-
 
 
 
