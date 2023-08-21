@@ -1,0 +1,5 @@
+inference_images,inspection_time,status,reason,selected_model
+['localhost:3306/628b759dcf4f27d578114db8.jpg'],2022-05-23 17:23:01.532069,Rejected,[],MR197
+['localhost:3306/628b75a9cf4f27d578114db9.jpg'],2022-05-23 17:23:13.065569,Rejected,[],MR192
+['localhost:3306/628b7a99043f6cd06bc04a71.jpg'],2022-05-23 17:44:17.016803,Rejected,['MR270'],MR192
+['localhost:3306/628b7aa7043f6cd06bc04a72.jpg'],2022-05-23 17:44:30.998433,Accepted,['MR270'],MR270

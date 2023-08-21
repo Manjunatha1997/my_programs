@@ -1,0 +1,4 @@
+train: ./manju/images/train
+val: ./manju/images/test
+nc: 7
+names: ['dent', 'holes', 'chamfer_absence', 'chamfer_presence', 'thread_absence', 'thread_presence', 'burr']

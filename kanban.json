@@ -1,0 +1,129 @@
+
+{"view1":
+    [
+        
+        {"defect_name":"chamfer_absence", "count":1, "coords": []},
+        {"defect_name": "thread_absence", "count":1,"cords":[]},
+        {"defect_name":"dent", "count":1,"cords":[]},
+        {"defect_name": "burr", "count":1,"cords":[]}
+    ],
+"view2":[
+
+            
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name": "thread_absence", "count":1,"cords":[]},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}
+            ],
+"view3":[
+            
+            
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name": "thread_absence", "count":1,"cords":[]},
+            {"defect_name":"dent", "count":1,"cords":[]}
+            ],
+"view4":[
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}
+            ],
+"view5":[
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}            
+
+            ],
+"view6":[
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"feature_name":"hole_presence", "count":1, "coords": []},
+
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}
+
+            ],
+"view7":[
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}
+            ],
+"view8":[
+            {"defect_name": "hole_absence", "count": 1, "coords": []},
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name": "thread_absence", "count":1,"cords":[]},
+            {"defect_name":"dent", "count":1,"cords":[]}         
+        ],
+"view9":[
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}
+            ],
+"view10":[
+            
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name": "thread_absence", "count":1,"cords":[]},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "burr", "count":1,"cords":[]}
+            ],
+"view11":[
+
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "damler", "count":1,"cords":[]}
+            ],
+"view12":[
+
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "damler", "count":1,"cords":[]}
+            ],
+"view13":[
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name":"35hole_absence", "count":1,"cords":[]},
+            {"defect_name":"19hole_absence", "count":1,"cords":[]},
+            {"defect_name":"35_19_hole_absence", "count":1,"cords":[]}
+                
+            ],
+"view14":[
+            
+
+            {"defect_name":"chamfer_absence", "count":1, "coords": []},
+            {"defect_name":"dent", "count":1,"cords":[]},
+            {"defect_name": "damler", "count":1,"cords":[]}
+
+                
+            ],
+        
+"view15":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+        
+    ],
+"view16":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+        
+    ],
+
+"view17":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+        
+    ],
+"view18":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+  
+        
+    ],
+"view19":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+        
+    ],
+"view20":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+        
+    ],
+"view21":[
+    {"defect_name": "burr", "count":1,"cords":[]}
+        
+    ]
+}
+
+        

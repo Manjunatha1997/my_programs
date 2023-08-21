@@ -1,0 +1,10 @@
+Python								OpenCV					Git,GitHub
+Django 								ML						Docker,kubernates
+Django-Rest-Framework				DL
+HTML
+CSS
+BOOTSTRAP
+JavaScript
+React
+
+

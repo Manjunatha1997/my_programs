@@ -1,0 +1,22 @@
+inference_images,inspection_time,status,reason,selected_model
+['localhost:3306/6289dcabb3e5c6cba800742e.jpg'],2022-05-22 12:18:11.262851,Accepted,['MR192'],MR192
+['localhost:3306/6289dcb0b3e5c6cba800742f.jpg'],2022-05-22 12:18:16.824158,Rejected,['MR192'],MR197
+['localhost:3306/6289dcb6b3e5c6cba8007430.jpg'],2022-05-22 12:18:22.634900,Rejected,['MR192'],MR235
+['localhost:3306/6289dcbbb3e5c6cba8007431.jpg'],2022-05-22 12:18:27.080666,Rejected,['MR192'],MR244
+['localhost:3306/6289dcbfb3e5c6cba8007432.jpg'],2022-05-22 12:18:31.413173,Rejected,['MR192'],MR270
+['localhost:3306/6289e1032cf26a6c691d703b.jpg'],2022-05-22 12:36:42.909915,Accepted,['MR192'],MR192
+['localhost:3306/6289e1062cf26a6c691d703c.jpg'],2022-05-22 12:36:46.038174,Accepted,['MR192'],MR192
+['localhost:3306/6289e10a2cf26a6c691d703d.jpg'],2022-05-22 12:36:50.325442,Rejected,['MR192'],MR197
+['localhost:3306/6289e3ad392cd1d0fe411cda.jpg'],2022-05-22 12:48:05.469842,Accepted,['MR192'],MR192
+['localhost:3306/6289e3b0392cd1d0fe411cdb.jpg'],2022-05-22 12:48:08.275938,Accepted,['MR192'],MR192
+['localhost:3306/6289e3b5392cd1d0fe411cdc.jpg'],2022-05-22 12:48:13.687637,Accepted,['MR192'],MR192
+['localhost:3306/6289e3c1392cd1d0fe411cdd.jpg'],2022-05-22 12:48:24.997706,Accepted,['MR192'],MR192
+['localhost:3306/6289e3c5392cd1d0fe411cde.jpg'],2022-05-22 12:48:29.822813,Rejected,['MR192'],MR197
+['localhost:3306/6289e3c9392cd1d0fe411cdf.jpg'],2022-05-22 12:48:32.916694,Rejected,['MR192'],MR197
+['localhost:3306/6289e3ca392cd1d0fe411ce0.jpg'],2022-05-22 12:48:34.041131,Rejected,['MR192'],MR197
+['localhost:3306/6289e3cb392cd1d0fe411ce1.jpg'],2022-05-22 12:48:34.948818,Rejected,['MR192'],MR197
+['localhost:3306/6289e3ce392cd1d0fe411ce2.jpg'],2022-05-22 12:48:37.869236,Rejected,['MR192'],MR197
+['localhost:3306/6289e406392cd1d0fe411ce3.jpg'],2022-05-22 12:49:33.877850,Accepted,['MR192'],MR192
+['localhost:3306/6289e407392cd1d0fe411ce4.jpg'],2022-05-22 12:49:35.872090,Accepted,['MR192'],MR192
+['localhost:3306/6289e40c392cd1d0fe411ce5.jpg'],2022-05-22 12:49:40.401485,Rejected,['MR192'],MR244
+['localhost:3306/6289e40e392cd1d0fe411ce6.jpg'],2022-05-22 12:49:42.664568,Rejected,['MR192'],MR244

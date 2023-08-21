@@ -1,0 +1,3 @@
+inference_images,inspection_time,status,reason,selected_model
+['localhost:3306/628623ab16c27da56499172a.jpg'],2022-05-19 16:32:03.038204,Accepted,['Model1'],Model1
+['localhost:3306/628623ad16c27da56499172b.jpg'],2022-05-19 16:32:05.074863,Accepted,['Model1'],Model1

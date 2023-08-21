@@ -1,0 +1,4 @@
+inference_images,inspection_time,status,reason,selected_model
+['localhost:3306/62b3457e767ae9b517b5dda5.jpg'],2022-06-22 22:08:21.877115,Rejected,"['yellowClip_Presence', 'yellowClip_Presence']",MR192
+['localhost:3306/62b34872767ae9b517b5dda6.jpg'],2022-06-22 22:20:58.155376,Rejected,"['yellowClip_Presence', 'yellowClip_Presence']",MR192
+['localhost:3306/62b34874767ae9b517b5dda7.jpg'],2022-06-22 22:21:00.697893,Rejected,"['yellowClip_Presence', 'yellowClip_Presence']",MR192
