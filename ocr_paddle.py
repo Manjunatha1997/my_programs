@@ -19,7 +19,7 @@ def get_ocr_data(frame):
         boxes = [line[0] for line in result]
         txts = [line[1][0] for line in result]
         scores = [line[1][1] for line in result]
-        ocr_image = draw_ocr(frame, boxes, txts,font_path='/home/manju/Documents/mobile_apps/livis_ocr/livis-be/flaskk/simfang.ttf')
+        ocr_image = draw_ocr(frame, boxes, txts,font_path='simfang.ttf')
  
         print("txts in try ", txts)
 
@@ -35,8 +35,8 @@ def create_dir(out):
         os.makedirs(out)
 
 
-path = "/home/manju/Documents/seneca/dataset/pole/srgan_test_output/"
-out = "/home/manju/Documents/seneca/dataset/pole/srgan_test_output/ocr_out/"
+path = "C:/Users/Admin/Downloads/Cat/Cat/"
+out = "C:/Users/Admin/Downloads/Cat/Cat/ocr_out/"
 create_dir(out)
 images  = glob.glob(os.path.join(path,"*"))
 
@@ -75,3 +75,7 @@ for image in images:
         cv2.imwrite(out_image_path,inf_img)
     except Exception as e:
         print(e,"skipping file >>",image)
+
+
+
+
