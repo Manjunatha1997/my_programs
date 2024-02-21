@@ -26,7 +26,7 @@ import ast
 PART_LIST = ['','Part1','Part2']
 
 
-def create_csv():
+def create_csv(inference_images,inspection_time,status,reason,selected_model):
 	today_date = date.today()
 	today_date = str(today_date)
 	today_date_csv_file = 'reports/'+today_date+'.csv'
@@ -34,15 +34,6 @@ def create_csv():
 	if not os.path.exists(today_date_csv_file):
 		with open(today_date_csv_file, 'w') as f:
 			f.write('inference_images,inspection_time,status,reason,part_name\n')
-
-
-
-def add_data(inference_images,inspection_time,status,reason,selected_model):
-	today_date = date.today()
-	today_date = str(today_date)
-	# today_date_csv_file = today_date+'.csv'
-	today_date_csv_file = 'reports/'+today_date+'.csv'
-
 
 	with open(today_date_csv_file, 'a', newline='') as f_object:  
 		# Pass the CSV  file object to the writer() function
@@ -52,6 +43,22 @@ def add_data(inference_images,inspection_time,status,reason,selected_model):
 		writer_object.writerow([inference_images,inspection_time,status,reason,selected_model])  
 		# Close the file object
 		f_object.close()
+
+# def add_data(inference_images,inspection_time,status,reason,selected_model):
+# 	today_date = date.today()
+# 	today_date = str(today_date)
+# 	# today_date_csv_file = today_date+'.csv'
+# 	today_date_csv_file = 'reports/'+today_date+'.csv'
+
+
+# 	with open(today_date_csv_file, 'a', newline='') as f_object:  
+# 		# Pass the CSV  file object to the writer() function
+# 		writer_object = writer(f_object)
+# 		# Result - a writer object
+# 		# Pass the data in the list as an argument into the writerow() function
+# 		writer_object.writerow([inference_images,inspection_time,status,reason,selected_model])  
+# 		# Close the file object
+# 		f_object.close()
 
 
 ## Footer
@@ -91,7 +98,8 @@ if selected == 'Operator':
 	col1, col2,col3 = st.columns([4,1,1])
 	
 	with col1:
-		part_name = st.selectbox(
+		part_name_placeholder = st.empty()
+		part_name = part_name_placeholder.selectbox(
 
 	"Select Part Name",
 
@@ -99,11 +107,14 @@ if selected == 'Operator':
 	with col2:
 		if part_name:
 
-			run = st.checkbox('Run')
+			run = st.checkbox('RUN')
 	with col3:
 		if part_name:
 			if run:
 				btn = st.button('Inspect')
+				part_name_placeholder.empty()
+				part_name_placeholder.text(f"Part Name : {part_name}")
+				
 
 	FRAME_WINDOW = st.image([])
 
@@ -113,7 +124,7 @@ if selected == 'Operator':
 
 	st.sidebar.info('Inspection Count')
 
-	REPORTS = st.sidebar.dataframe(None)
+	REPORTS = st.sidebar.dataframe(None,use_container_width=True)
 
 
 	df = pd.read_csv('inspection_count.csv')
@@ -159,13 +170,13 @@ if selected == 'Operator':
 			df.to_csv('inspection_count.csv',header=True, index=False)
 			REPORTS.dataframe(df)
 			################################## Detailed report #################
-			create_csv()
+			create_csv(predicted_images,time_stamp,is_accepted,defects,part_name)
 			# file_name = str(bson.ObjectId())
 			# fname = './datadrive/'+file_name+'.jpg'
 			# cv2.imwrite(fname,frame)
 			# fname_s = fname.replace('./datadrive/','localhost:3306/')
 
-			add_data(predicted_images,time_stamp,is_accepted,defects,part_name)
+			# add_data(predicted_images,time_stamp,is_accepted,defects,part_name)
 
 		btn = False
 
