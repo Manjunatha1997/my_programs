@@ -95,7 +95,7 @@ if selected == 'Home':
 ## Operator
 if selected == 'Operator':
 	st.success('LIVE FEED')
-	col1, col2,col3 = st.columns([4,1,1])
+	col1, col2,col3 = st.columns([7,2,2])
 	
 	with col1:
 		part_name_placeholder = st.empty()
@@ -106,12 +106,13 @@ if selected == 'Operator':
 	PART_LIST)
 	with col2:
 		if part_name:
-
-			run = st.checkbox('RUN')
+			run_placeholder = st.empty()
+			run = run_placeholder.button('Start Process',use_container_width=True)
 	with col3:
 		if part_name:
 			if run:
-				btn = st.button('Inspect')
+				run_placeholder.button('Stop Process',use_container_width=True)
+				btn = st.button('Inspect',use_container_width=True)
 				part_name_placeholder.empty()
 				part_name_placeholder.text(f"Part Name : {part_name}")
 				
@@ -207,50 +208,53 @@ if selected == 'Detailed Report':
 	try:
 		if date_selected:
 
-			sub_col1, sub_col2 = st.columns([4,1])
-			with sub_col1:
-				st.text('')
-				detailed_report = st.dataframe(None,use_container_width=True)
+			# sub_col1, sub_col2 = st.columns([9,1])
+			# with sub_col1:
+			st.text('')
+			detailed_report = st.dataframe(None)
+			
+			today_date_csv_file = 'reports/'+str(date_selected)+'.csv'
+			data = pd.read_csv(today_date_csv_file)
+			
+
+			if select_status and select_part_name:
+				data = data[(data['status'] == select_status) & (data['part_name'] == select_part_name)]
+			elif select_status:
+				data = data[data['status'] == select_status]
+			elif select_part_name:
+				data = data[data['part_name'] == select_part_name]
+			
+
+			data['inference_images'] = data['inference_images'].apply(ast.literal_eval)
+
+			# # Reorder the columns
+			data = data[['part_name', 'status', 'reason', 'inspection_time','inference_images']]
+		
+			detailed_report.dataframe(data,use_container_width=True)
 				
-				today_date_csv_file = 'reports/'+str(date_selected)+'.csv'
-				data = pd.read_csv(today_date_csv_file)
-				
-				if select_status and select_part_name:
-					data = data[(data['status'] == select_status) & (data['part_name'] == select_part_name)]
-				elif select_status:
-					data = data[data['status'] == select_status]
-				elif select_part_name:
-					data = data[data['part_name'] == select_part_name]
-				
 
-				
+			# with sub_col2:
+			# 	values = data.index.values
+			# 	m = st.markdown("""
+			# 			<style>
+			# 			div.stButton > button:first-child {
+			# 				# background-color: rgb(204, 49, 49);
+			# 				height:20px;
+			# 				# margin-down:20px;
+			# 			}
+			# 			</style>""", unsafe_allow_html=True)
 
-				# Reorder the columns
-				data = data[['part_name', 'status', 'reason', 'inspection_time', 'inference_images']]
-
-				detailed_report.dataframe(data,use_container_width=True)
-
-			with sub_col2:
-				values = data.index.values
-				# m = st.markdown("""
-				# 		<style>
-				# 		div.stButton > button:first-child {
-				# 			# background-color: rgb(204, 49, 49);
-				# 			height:20px;
-				# 			# margin-down:20px;
-				# 		}
-				# 		</style>""", unsafe_allow_html=True)
-
-				# st.button('Images',use_container_width=True)
-
-				# for index, row in data.iterrows():
-				# 	# data[index] = st.button(f"Display Image {row['inference_images']}")
-				# 	if st.button(f"image {values[index]}",use_container_width=True):
-				# 		# Display the inference_image corresponding to the row
-				# 		image_data = ast.literal_eval(row['inference_images'])
-				# 		with sub_col1:
-				# 			for i in range(len(image_data)):
-				# 				st.image(image_data[i], caption=f"Image {image_data[i]}")
+			# 	st.button('Images',use_container_width=True)
+			# 	for index, row in data.iterrows():
+			# 		# data[index] = st.button(f"Display Image {row['inference_images']}")
+			# 		if st.button(f"image {values[index]}",use_container_width=True):
+			# 			# Display the inference_image corresponding to the row
+			# 			image_data = ast.literal_eval(row['inference_images'])
+						
+			# 			with sub_col1:
+			# 				st.image(image_data)
+			# 				# for i in range(len(image_data)):
+			# 				# 	st.image(image_data[i], caption=f"Image {image_data[i]}")
 
 
 			col1, col2, col3 = st.columns(3)
@@ -261,7 +265,10 @@ if selected == 'Detailed Report':
 			with col3:
 				st.info('Total Count : '+str(len(data)))
 
+
+
 			
+		
 			
 
 
