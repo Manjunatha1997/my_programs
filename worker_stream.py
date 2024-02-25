@@ -47,6 +47,8 @@ redis_obj = CacheHelper()
 while True:
     inspect = redis_obj.get_json("inspect")
     input_frame = redis_obj.get_json("input_frame")
+    if input_frame is None:
+        continue
     input_frame_copy = input_frame.copy()
     
     predicted_frame, detections, coordinates = predictor.run_inference_hub(predictor_model,input_frame)

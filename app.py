@@ -84,7 +84,7 @@ with st.sidebar:
 
 ## Home
 if selected == 'Home':
-	img =  cv2.cvtColor(cv2.imread('Lincode-1592836225218.webp'),cv2.COLOR_BGR2RGB)
+	img =  cv2.cvtColor(cv2.imread('static/images/Lincode-1592836225218.webp'),cv2.COLOR_BGR2RGB)
 	img = cv2.resize(img,(1920,1080))
 	st.image(img)
 
@@ -141,14 +141,12 @@ if selected == 'Operator':
 
 	while part_name and run:
 		predicted_frame = CacheHelper().get_json('predicted_frame')
+		if predicted_frame is None:
+			predicted_frame = cv2.imread('static/images/no_image.jpg')
 		predicted_frame = cv2.resize(predicted_frame,(1920,1080))
-		# predicted_frame = cv2.flip(predicted_frame,1)
 
 		frame = predicted_frame.copy()
 
-	
-
-		
 		predicted_frame = cv2.cvtColor(predicted_frame,cv2.COLOR_BGR2RGB)
 		FRAME_WINDOW.image(predicted_frame)
 		is_inspected = CacheHelper().get_json("is_inspected")
