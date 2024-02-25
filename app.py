@@ -165,15 +165,15 @@ if selected == 'Operator':
 
 
 			if is_accepted == 'Accepted':
-				df['accepted'][0] += 1
+				df['Accepted'][0] += 1
 				# status.write('<p style="color:green;font-weight:bold;"> Accepted</p>',unsafe_allow_html=True)
 				status_placeholder.success("Status : Accepted")
 			if is_accepted == 'Rejected':
-				df['rejected'][0] += 1
+				df['Rejected'][0] += 1
 				# status.write('<p style="color:red;font-weight:bold;"> Rejected</p>',unsafe_allow_html=True)
 				status_placeholder.warning("Status : Rejected")
 
-			df['total'][0] += 1
+			df['Total'][0] += 1
 			
 			
 			df.to_csv('inspection_count.csv',header=True, index=False)
@@ -184,9 +184,9 @@ if selected == 'Operator':
 		btn = False
 
 	else:
-		df['accepted'][0] = 0
-		df['rejected'][0] = 0
-		df['total'][0] = 0
+		df['Accepted'][0] = 0
+		df['Rejected'][0] = 0
+		df['Total'][0] = 0
 		df.to_csv('inspection_count.csv',header=True, index=False)
 		REPORTS.dataframe(df,use_container_width=True,hide_index=True)
 
