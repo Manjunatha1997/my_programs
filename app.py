@@ -203,7 +203,7 @@ def display_images(image_urls):
 if selected == 'Detailed Report':
 	col1, col2, col3 = st.columns(3)
 	with col1:
-		date_selected = st.date_input ( 'Select Date' , value=None , min_value=None , max_value=None , key=None)
+		date_selected = st.date_input ( 'Select Date' , value="today" , min_value=None , max_value=None , key=None)
 	with col2:
 		select_status = st.selectbox("Select Status",["","Accepted","Rejected"])
 	with col3:
@@ -212,31 +212,28 @@ if selected == 'Detailed Report':
 	try:
 		if date_selected:
 
-			sub_col1, sub_col2 = st.columns([4,1])
-			with sub_col1:
-				st.text('')
-				detailed_report = st.dataframe(None,use_container_width=True)
-				
-				today_date_csv_file = 'reports/'+str(date_selected)+'.csv'
-				data = pd.read_csv(today_date_csv_file)
-				
-				if select_status and select_part_name:
-					data = data[(data['status'] == select_status) & (data['part_name'] == select_part_name)]
-				elif select_status:
-					data = data[data['status'] == select_status]
-				elif select_part_name:
-					data = data[data['part_name'] == select_part_name]
-				
+			# sub_col1, sub_col2 = st.columns([4,1])
+			# with sub_col1:
+			st.text('')
+			detailed_report = st.dataframe(None,use_container_width=True)
+			
+			today_date_csv_file = 'reports/'+str(date_selected)+'.csv'
+			data = pd.read_csv(today_date_csv_file)
+			
+			if select_status and select_part_name:
+				data = data[(data['status'] == select_status) & (data['part_name'] == select_part_name)]
+			elif select_status:
+				data = data[data['status'] == select_status]
+			elif select_part_name:
+				data = data[data['part_name'] == select_part_name]
+		
+			# Reorder the columns
+			data = data[['part_name', 'status', 'reason', 'inspection_time', 'inference_images']]
 
-				
+			detailed_report.dataframe(data,use_container_width=True)
 
-				# Reorder the columns
-				data = data[['part_name', 'status', 'reason', 'inspection_time', 'inference_images']]
-
-				detailed_report.dataframe(data,use_container_width=True)
-
-			with sub_col2:
-				values = data.index.values
+			# with sub_col2:
+			# 	values = data.index.values
 				# m = st.markdown("""
 				# 		<style>
 				# 		div.stButton > button:first-child {
