@@ -112,6 +112,9 @@ if selected == 'Operator':
 		if part_name:
 			if run:
 				btn = st.button('Inspect')
+				if btn:
+					CacheHelper().set_json({"inspect":True})
+					
 				part_name_placeholder.empty()
 				part_name_placeholder.text(f"Part Name : {part_name}")
 				
@@ -119,12 +122,13 @@ if selected == 'Operator':
 	FRAME_WINDOW = st.image([])
 
 	
-	st.sidebar.info('Status')
-	status = st.sidebar.text(' -- ')
+	status_placeholder = st.sidebar.info('Status : ---')
+	# st.sidebar.info('Status')
+	# status = st.sidebar.text(' -- ')
 
 	st.sidebar.info('Inspection Count')
 
-	REPORTS = st.sidebar.dataframe(None,use_container_width=True)
+	REPORTS = st.sidebar.dataframe(None,use_container_width=True,hide_index=True)
 
 
 	df = pd.read_csv('inspection_count.csv')
@@ -138,46 +142,47 @@ if selected == 'Operator':
 	while part_name and run:
 		predicted_frame = CacheHelper().get_json('predicted_frame')
 		predicted_frame = cv2.resize(predicted_frame,(1920,1080))
+		# predicted_frame = cv2.flip(predicted_frame,1)
 
 		frame = predicted_frame.copy()
 
-		worker_response = CacheHelper().get_json("worker_response")
-		if not worker_response:
-			worker_response = {}
-		defects = worker_response.get("defect_list","")
-		is_accepted = worker_response.get("status",None)
-		time_stamp = worker_response.get("time_stamp",None)
-		predicted_images = worker_response.get("predicted_frames",None)
-
-
+	
 
 		
 		predicted_frame = cv2.cvtColor(predicted_frame,cv2.COLOR_BGR2RGB)
 		FRAME_WINDOW.image(predicted_frame)
-		defect_list.write(defects)
-		
-		if btn:
-			CacheHelper().set_json({"inspect":True})
+		is_inspected = CacheHelper().get_json("is_inspected")
+	
+		if is_inspected:
+			CacheHelper().set_json({"is_inspected":False})
+			
+			worker_response = CacheHelper().get_json("worker_response")
+			if not worker_response:
+				worker_response = {}
+			defects = worker_response.get("defect_list","")
+			is_accepted = worker_response.get("status",None)
+			time_stamp = worker_response.get("time_stamp",None)
+			predicted_images = worker_response.get("predicted_frames",None)
+			defect_list.write(defects)
+
+
 			if is_accepted == 'Accepted':
 				df['accepted'][0] += 1
-				status.write('<p style="color:green;font-weight:bold;"> Accepted</p>',unsafe_allow_html=True)
+				# status.write('<p style="color:green;font-weight:bold;"> Accepted</p>',unsafe_allow_html=True)
+				status_placeholder.success("Status : Accepted")
 			if is_accepted == 'Rejected':
 				df['rejected'][0] += 1
-				status.write('<p style="color:red;font-weight:bold;"> Rejected</p>',unsafe_allow_html=True)
+				# status.write('<p style="color:red;font-weight:bold;"> Rejected</p>',unsafe_allow_html=True)
+				status_placeholder.warning("Status : Rejected")
+
 			df['total'][0] += 1
 			
 			
 			df.to_csv('inspection_count.csv',header=True, index=False)
-			REPORTS.dataframe(df)
+			REPORTS.dataframe(df,use_container_width=True,hide_index=True)
 			################################## Detailed report #################
 			create_csv(predicted_images,time_stamp,is_accepted,defects,part_name)
-			# file_name = str(bson.ObjectId())
-			# fname = './datadrive/'+file_name+'.jpg'
-			# cv2.imwrite(fname,frame)
-			# fname_s = fname.replace('./datadrive/','localhost:3306/')
-
-			# add_data(predicted_images,time_stamp,is_accepted,defects,part_name)
-
+				
 		btn = False
 
 	else:
@@ -185,7 +190,7 @@ if selected == 'Operator':
 		df['rejected'][0] = 0
 		df['total'][0] = 0
 		df.to_csv('inspection_count.csv',header=True, index=False)
-		REPORTS.dataframe(df)
+		REPORTS.dataframe(df,use_container_width=True,hide_index=True)
 
 
 

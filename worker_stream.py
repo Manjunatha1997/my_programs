@@ -12,7 +12,9 @@ import requests
 predictor = Predictor()
 predictor.model_dir = './'
 predictor.weights_path = "yolov5n.pt"
-predictor.defects = []
+predictor.common_confidence = 0.1
+predictor.image_size = 640
+predictor.defects = ['person']
 predictor.features = []
 predictor.features_count = []
 
@@ -74,8 +76,9 @@ while True:
 
         }
 
-        print(worker_response," :: worker response ")
+        print(f" \n\n  worker response :: {worker_response} \n\n ")
 
         redis_obj.set_json({"worker_response":worker_response})
         redis_obj.set_json({"inspect":False})
+        redis_obj.set_json({"is_inspected":True})
 
