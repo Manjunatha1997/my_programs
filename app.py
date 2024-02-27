@@ -33,7 +33,7 @@ def create_csv(inference_images,inspection_time,status,reason,selected_model):
 
 	if not os.path.exists(today_date_csv_file):
 		with open(today_date_csv_file, 'w') as f:
-			f.write('inference_images,inspection_time,status,reason,part_name\n')
+			f.write('inference_images,inspected_at,status,reason,part_name\n')
 
 	with open(today_date_csv_file, 'a', newline='') as f_object:  
 		# Pass the CSV  file object to the writer() function
@@ -206,7 +206,8 @@ if selected == 'Detailed Report':
 		select_status = st.selectbox("Select Status",["","Accepted","Rejected"])
 	with col3:
 		select_part_name = st.selectbox("Select Part Name",PART_LIST)
-
+	
+		
 	try:
 		if date_selected:
 
@@ -226,10 +227,11 @@ if selected == 'Detailed Report':
 				data = data[data['part_name'] == select_part_name]
 		
 			# Reorder the columns
-			data = data[['part_name', 'status', 'reason', 'inspection_time', 'inference_images']]
+			data = data[['part_name', 'status', 'reason', 'inspected_at', 'inference_images']]
 
 			detailed_report.dataframe(data,use_container_width=True)
 
+			
 			# with sub_col2:
 			# 	values = data.index.values
 				# m = st.markdown("""
@@ -266,6 +268,7 @@ if selected == 'Detailed Report':
 
 
 	except Exception as e:
-		st.write('Data Not Found : ',e)
+		detailed_report.warning("Data Not Found")
+		# st.write(f'Data Not Found {e}')
 	
 

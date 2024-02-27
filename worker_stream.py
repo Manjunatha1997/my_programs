@@ -70,8 +70,8 @@ while True:
         predicted_frame_url = "http://localhost:3306/"+object_id+"_pf.jpg"
 
         worker_response = {
-            "input_frames":[input_frame_url,input_frame_url],
-            "predicted_frames":[predicted_frame_url,predicted_frame_url],
+            "input_frames":[input_frame_url],
+            "predicted_frames":[predicted_frame_url],
             "status":status,
             "defect_list":defect_list,
             "time_stamp":datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
