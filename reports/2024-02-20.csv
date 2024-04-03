@@ -1,0 +1,5 @@
+inference_images,inspection_time,status,reason,part_name
+"['http://localhost:3306/65d4ba892690a33c835a437e_pf.jpg', 'http://localhost:3306/65d4ba892690a33c835a437e_pf.jpg']",2024-02-20 20:13:21,Accepted,[],Part2
+"['http://localhost:3306/65d4ba8d2690a33c835a437f_pf.jpg', 'http://localhost:3306/65d4ba8d2690a33c835a437f_pf.jpg']",2024-02-20 20:13:25,Accepted,[],Part1
+"['http://localhost:3306/65d4bc712690a33c835a4380_pf.jpg', 'http://localhost:3306/65d4bc712690a33c835a4380_pf.jpg']",2024-02-20 20:21:29,Accepted,[],Part1
+"['http://localhost:3306/65d4bc722690a33c835a4381_pf.jpg', 'http://localhost:3306/65d4bc722690a33c835a4381_pf.jpg']",2024-02-20 20:21:30,Accepted,[],Part1

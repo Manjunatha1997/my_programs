@@ -1,0 +1,13 @@
+inference_images,inspection_time,status,reason,part_name
+"['http://localhost:3306/65d4bc732690a33c835a4382_pf.jpg', 'http://localhost:3306/65d4bc732690a33c835a4382_pf.jpg']",2024-02-20 20:21:31,Accepted,[],Part1
+"['http://localhost:3306/65d61030937af51190cde9af_pf.jpg', 'http://localhost:3306/65d61030937af51190cde9af_pf.jpg']",2024-02-21 20:31:04,Accepted,[],Part1
+"['http://localhost:3306/65d61039937af51190cde9b0_pf.jpg', 'http://localhost:3306/65d61039937af51190cde9b0_pf.jpg']",2024-02-21 20:31:13,Accepted,[],Part1
+"['http://localhost:3306/65d6103c937af51190cde9b1_pf.jpg', 'http://localhost:3306/65d6103c937af51190cde9b1_pf.jpg']",2024-02-21 20:31:16,Accepted,[],Part1
+"['http://localhost:3306/65d610dd937af51190cde9b2_pf.jpg', 'http://localhost:3306/65d610dd937af51190cde9b2_pf.jpg']",2024-02-21 20:33:57,Accepted,[],Part1
+"['http://localhost:3306/65d612bc937af51190cde9b4_pf.jpg', 'http://localhost:3306/65d612bc937af51190cde9b4_pf.jpg']",2024-02-21 20:41:56,Accepted,[],Part1
+"['http://localhost:3306/65d612e4937af51190cde9b5_pf.jpg', 'http://localhost:3306/65d612e4937af51190cde9b5_pf.jpg']",2024-02-21 20:42:36,Accepted,[],Part1
+"['http://localhost:3306/65d612ea937af51190cde9b6_pf.jpg', 'http://localhost:3306/65d612ea937af51190cde9b6_pf.jpg']",2024-02-21 20:42:42,Accepted,[],Part1
+"['http://localhost:3306/65d612eb937af51190cde9b7_pf.jpg', 'http://localhost:3306/65d612eb937af51190cde9b7_pf.jpg']",2024-02-21 20:42:43,Accepted,[],Part1
+"['http://localhost:3306/65d613e3937af51190cde9b8_pf.jpg', 'http://localhost:3306/65d613e3937af51190cde9b8_pf.jpg']",2024-02-21 20:46:51,Accepted,[],Part1
+"['http://localhost:3306/65d613e5937af51190cde9b9_pf.jpg', 'http://localhost:3306/65d613e5937af51190cde9b9_pf.jpg']",2024-02-21 20:46:53,Accepted,[],Part1
+"['http://localhost:3306/65d615171343987b7e050004_pf.jpg', 'http://localhost:3306/65d615171343987b7e050004_pf.jpg']",2024-02-21 20:51:59,Accepted,[],Part1
