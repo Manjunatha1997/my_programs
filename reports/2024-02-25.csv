@@ -1,3 +1,0 @@
-inference_images,inspected_at,status,reason,part_name
-['http://localhost:3306/65db575e136132369a76abbe_pf.jpg'],2024-02-25 20:36:06,Rejected,['person'],Part1
-['http://localhost:3306/65db5824136132369a76abc0_pf.jpg'],2024-02-25 20:39:24,Accepted,[],Part1
