@@ -7,10 +7,10 @@ from xml_wrapper_module_updated import *
 
 
 
-image = Image.open("lincode.png")
+image = Image.open("static/images/logo.jpg")
 
 st.set_page_config(
-  page_title="LIVIS",page_icon=image,layout="wide"
+  page_title="Annotation Validation",page_icon=image,layout="wide"
 )
 
 
